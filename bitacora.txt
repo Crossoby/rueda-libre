@@ -202,4 +202,44 @@ Prueba en un celular real: [anotar dispositivo y resultado].
 
 Los espacios entre corchetes corresponden a resultados o enlaces que todavía debo registrar. No doy por terminadas esas comprobaciones hasta realizarlas.
 
+MINIRETO 5. LA FLOTA EN BOOTSTRAP: PRIMERA COMPARACIÓN
 
+Preparé la página pruebas/catalogo-bootstrap.html y copié los siete modelos de bicicletas. Enlacé el CSS y el bundle de JavaScript de Bootstrap 5.3.8 por CDN. Ajusté las rutas de las imágenes con ../img/ y los siete enlaces de reserva con ../paginas/reservas.html. No enlacé mi archivo styles.css.
+
+Organicé la flota con container, row y g-4. En cada columna usé col-12, col-sm-6, col-lg-4 y col-xl-3. Estas clases definen una bicicleta por fila en pantallas pequeñas, dos desde 576 px, tres desde 992 px y cuatro desde 1200 px. g-4 establece la separación horizontal y vertical.
+
+Comparación de tiempo y código:
+
+Tiempo invertido en reconstruir la distribución: aproximadamente 30 minutos.
+
+CSS de la cuadrícula #flota en mi versión propia: 6 declaraciones; 4 en la regla inicial, 1 en la base móvil y 1 en la media query de 768 px.
+
+CSS propio de distribución en la prueba con Bootstrap: 0 líneas.
+
+Clases distintas para la grilla: 7.
+
+Apariciones de esas clases en el HTML: 31; tres generales y cuatro en cada una de las siete columnas.
+
+Para comparar la cuadrícula, conté cada declaración como una línea, aunque esté escrita en varias. Incluí las reglas compartidas que nombran #flota. Excluí comentarios, llaves, estilos generales y los estilos internos de tarjetas, imágenes y botones. En Bootstrap conté solo las clases de la grilla; no incluí card, btn ni h-100.
+
+Bootstrap me proporcionó la distribución adaptable y los espacios entre columnas sin escribir esas reglas ni las media queries. En mi versión propia tuve que definirlos en CSS. Con Bootstrap escribí menos CSS propio, pero añadí más clases al HTML.
+
+En esta prueba tuve menos libertad para elegir medidas y puntos de cambio personalizados, porque utilicé los valores preparados por Bootstrap. Se pueden personalizar, pero aquí trabajé sin CSS propio. También tuve que aprender qué significa cada clase.
+
+MiniReto 6. Utilidades de Bootstrap
+
+Construí los cuatro beneficios y la franja de reservas usando
+la grilla y utilidades de Bootstrap para controlar su apariencia.
+
+Cinco clases consultadas:
+- p-4 añade relleno interior de 1.5rem en los cuatro lados.
+- fs-3 controla el tamaño del texto.
+- border-success aplica el verde del tema al borde.
+- flex-md-row organiza los elementos en fila desde 768px.
+- d-md-block muestra el elemento como bloque desde 768px.
+
+Comprobé que a 767px la franja queda en columna y la imagen
+está oculta. A 768px pasa a fila y aparece la imagen.
+
+Aprendí a combinar utilidades y que las clases de color utilizan
+nombres predefinidos, como success y light.
