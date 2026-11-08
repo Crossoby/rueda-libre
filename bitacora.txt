@@ -243,3 +243,24 @@ está oculta. A 768px pasa a fila y aparece la imagen.
 
 Aprendí a combinar utilidades y que las clases de color utilizan
 nombres predefinidos, como success y light.
+
+MiniReto 7. Inicio con Bootstrap
+
+Integré Bootstrap 5.3.8 en index.html y dejé mi hoja
+de estilos después. Organicé la portada, la flota,
+las rutas y los beneficios con la grilla y utilidades.
+
+Revisé tres conflictos:
+1. La portada conservaba su distribución con Grid y
+reducía el espacio de la fila Bootstrap. Eliminé esas
+reglas antiguas.
+2. Bootstrap y mi CSS definían la fuente del body.
+Mi declaración prevalece porque la hoja propia
+aparece después y ambos selectores tienen igual
+especificidad.
+3. El fondo de .btn competía con #flota a. Prevalece
+#flota a por su mayor especificidad y conserva el
+verde de la marca.
+
+Resolví estos casos sin añadir !important y marqué
+los estilos que todavía necesitan Tarifas y Reservas.

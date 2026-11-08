@@ -64,7 +64,7 @@ caption {
 img {
     max-width: 100%;
     margin: var(--espacio-s);
-    border-radius: var(--espacio-m);
+    border-radius: var(--espacio-xs);
 }
 
 /*Organizacion de imagen de alquiler*/
@@ -124,7 +124,7 @@ img {
     display: inline-block;
     color: var(--crema);
     border-radius: var(--espacio-xs);
-    margin: 0;
+    margin: var(--espacio-xs);
 }
 
 /* Apariencia del botón secundario, como «Consultar tarifas» en la portada. */
@@ -136,6 +136,7 @@ img {
     text-decoration: none;
     font-weight: 600;
     font-size: var(--espacio-s);
+    margin: var(--espacio-xs);
 }
 
 /* Cambia el fondo y el texto del botón secundario al pasar el cursor
@@ -151,6 +152,10 @@ img {
     display: flex;
     gap: var(--espacio-s);
     flex-wrap: wrap;
+}
+
+#secundarios a {
+    color: var(--verde-ruta);
 }
 
 /* Distingue el enlace que tiene la clase activo en la página actual. */
@@ -178,11 +183,7 @@ img {
 /* Distribuye el texto y el bloque de imagen de la portada en columnas 1:2.
    Los centra verticalmente y establece una altura mínima de 35vh. */
 .portada {
-    display: grid;
     min-height: 35vh;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    gap: var(--espacio-s);
 
 }
 
@@ -203,25 +204,14 @@ img {
 
 /* Crea la cuadrícula adaptable de bicicletas con columnas de al menos 20rem.
    Las columnas se reparten el espacio restante por igual. */
-#flota {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: var(--espacio-s);
-    width: 100%;    
-    
-}
+
 
 /* Organiza el contenido de cada bicicleta en columna y define la caja de la tarjeta.
    space-between reparte el espacio libre y lleva el último enlace al final. */
 #flota article {
     position: relative;
-    display: flex;
-    flex-direction: column;
     border: 2px solid var(--gris-asfalto);
-    gap: var(--espacio-xs);
     border-radius: var(--espacio-xs);
-    padding: var(--espacio-xs);
-    justify-content: space-between;
 }
 
 /* Ajusta las fotos de la flota al ancho de cada tarjeta, con altura automática
@@ -267,7 +257,6 @@ img {
 /* Organiza cada servicio en columna y define su borde, relleno y esquinas.
    position: relative sirve de referencia para la etiqueta Nuevo. */
 .tarjeta {
-    position: relative;
     display: flex;
     flex-direction: column;
     border: 2px solid var(--gris-asfalto);
@@ -290,33 +279,11 @@ img {
     margin: 0;
 }
 
-/* Coloca Nuevo en la esquina superior derecha de la tarjeta que lo contiene.
-   position: absolute no reserva espacio en la distribución normal del contenido. */
-.etiqueta-nuevo {
-    position: absolute;
-    top: var(--espacio-s);
-    right: var(--espacio-s);
-    padding: 0.2rem var(--espacio-xs);
-    border-radius: 0.4rem;
-    background-color: var(--naranja-pedal);
-    color: var(--azul-noche);
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
 /* ==================================================
    8. INICIO: RUTAS
    Galería de recorridos y etiquetas de dificultad.
    ================================================== */
 
-/* Coloca las tres rutas en columnas de al menos 20rem, separadas mediante gap. */
-.rutas {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(20rem, 1fr));
-    gap: var(--espacio-m);
-    position: relative;
-    width: 100%;
-}
 
 /* Dibuja un contorno y redondea las esquinas de cada tarjeta de ruta. */
 .rutas article {
@@ -338,25 +305,6 @@ img {
     padding: var(--espacio-s);
 }
 
-/* Hace que cada artículo con clase dificultad sirva de referencia
-   para posicionar su etiqueta de nivel. */
-.dificultad {
-    position: relative;
-}
-
-/* Coloca el párrafo de dificultad en la esquina superior derecha de su artículo
-   y le da la apariencia de una etiqueta naranja. */
-.dificultad p{
-    position: absolute;
-    top: var(--espacio-s);
-    right: var(--espacio-s);
-    padding: 0.2rem var(--espacio-xs);
-    border-radius: 0.4rem;
-    background-color: var(--naranja-pedal);
-    color: var(--azul-noche);
-    font-size: 0.85rem;
-    font-weight: 600;
-}
 
 /* ==================================================
    9. TARIFAS Y TABLAS
@@ -537,6 +485,7 @@ footer {
     margin: 0;
     padding: 0;
     align-items: stretch;
+    width: 100%;
 }
 
 #menu a {
@@ -545,10 +494,7 @@ footer {
 }
 
 /* Una sola columna para el contenido en móvil. */
-.portada,
-#flota,
 .lista-servicios,
-.rutas,
 .reservas,
 #formulario-reserva .separacion {
     grid-template-columns: minmax(0, 1fr);
@@ -573,13 +519,8 @@ footer {
         align-items: center;
     }
 
-    /* Texto e imagen comparten una fila. */
-    .portada {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-    }
 
-    /* Flota y servicios vuelven a adaptar sus columnas al espacio. */
-    #flota,
+    /* Servicios: columnas adaptables desde 768 px. */
     .lista-servicios {
         grid-template-columns: repeat(
             auto-fit,
@@ -611,10 +552,6 @@ footer {
 
 /* ESCRITORIO: DESDE 1200 PX. */
 @media (min-width: 1200px) {
-    /* Tres rutas por fila. */
-    .rutas {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
 
     /* Formulario y contacto en proporción 2:1. */
     .reservas {
