@@ -1,55 +1,28 @@
-/* ==================================================
-   1. VARIABLES
-   Fuentes, colores y medidas reutilizables.
-   ================================================== */
-
-/* Variables globales para reutilizar fuentes, colores y espacios. */
+/* Rueda Libre v2.0-beta: identidad visual. La distribución usa Bootstrap. */
 :root {
     --fuente-titulos: "Montserrat", Arial, sans-serif;
     --fuente-texto: "Open Sans", Arial, sans-serif;
-
     --crema: #FAF6EF;
     --azul-noche: #14213D;
     --verde-ruta: #1E7A4F;
     --gris-asfalto: #5B6470;
     --naranja-pedal: #F2994A;
     --blanco: #FFFFFF;
-
     --espacio-xs: 0.5rem;
     --espacio-s: 1rem;
     --espacio-m: 1.5rem;
     --espacio-l: 2rem;
     --espacio-xl: 3rem;
+    --bs-success-rgb: 30, 122, 79;
 }
 
-/* ==================================================
-   2. BASE
-   Modelo de caja, aspecto general, títulos e imágenes.
-   ================================================== */
-
-/* Incluye el relleno y los bordes dentro del ancho y alto definidos. */
-* {
-    box-sizing: border-box;
-}
-
-/* Aplica el fondo, el color y la fuente general; elimina el margen exterior
-   y añade espacio interior al final de la página. */
+/* Fondo y tipografía de la marca. */
 body {
     background-color: var(--crema);
     color: var(--gris-asfalto);
     font-family: var(--fuente-texto);
-    padding-bottom: var(--espacio-s);
-    margin: 0%;
 }
 
-/* Centra el contenido principal y limita su ancho al 90 %, con un máximo de 70rem. */
-main {
-    margin: 0 auto;
-    max-width: 70rem;
-    width: 90%;
-}
-
-/* Comparte la fuente y el color entre títulos, leyendas y títulos de tablas. */
 h1,
 h2,
 h3,
@@ -59,288 +32,108 @@ caption {
     font-family: var(--fuente-titulos);
 }
 
-
-/* Limita el ancho de las imágenes y establece sus márgenes y esquinas generales. */
 img {
-    max-width: 100%;
-    margin: var(--espacio-s);
     border-radius: var(--espacio-xs);
 }
 
-/*Organizacion de imagen de alquiler*/
-.imagen-alquiler {
-    margin: var(--espacio-m);
-}
-
-/* ==================================================
-   3. ENCABEZADO Y MENÚ
-   Fondo del encabezado y distribución de la marca y la navegación.
-   ================================================== */
-
-/* Diferencia el encabezado con fondo blanco y un borde inferior gris. */
+/* Encabezado y estados del menú actual. */
 .encabezado {
     background-color: var(--blanco);
-    border-bottom: var(--gris-asfalto) 5px solid;
+    border-bottom: 5px solid var(--gris-asfalto);
 }
 
-/* Sitúa la marca y el menú en extremos opuestos, los centra verticalmente
-   y añade relleno dentro de la barra. */
-.barra {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--espacio-s);
-}
-
-/* Coloca el logo y el nombre en una fila, centrados verticalmente y separados. */
-.marca {
-    display: flex;
-    align-items: center;
-    gap: var(--espacio-xs);
-}
-
-/* Distribuye las opciones del menú con Flexbox, sin viñetas.
-   gap las separa y flex-wrap permite que pasen a otra fila. */
-#menu {
-    display: flex;
-    gap: var(--espacio-s);
-    list-style: none;
-    flex-wrap: wrap;
-}
-
-/* ==================================================
-   4. BOTONES Y ESTADOS DE NAVEGACIÓN
-   Apariencia de los enlaces y estados hover, focus y activo.
-   ================================================== */
-
-/* Apariencia compartida por los enlaces del menú y los botones de acción. */
 #menu a,
 .boton-accion {
-    padding: var(--espacio-s);
     font-weight: 600;
     text-decoration: none;
     font-size: var(--espacio-s);
     background-color: var(--verde-ruta);
-    display: inline-block;
     color: var(--crema);
     border-radius: var(--espacio-xs);
-    margin: var(--espacio-xs);
 }
 
-/* Apariencia del botón secundario, como «Consultar tarifas» en la portada. */
 .boton-secundario {
     background-color: var(--naranja-pedal);
     color: var(--azul-noche);
-    padding: var(--espacio-s);
     border-radius: var(--espacio-xs);
     text-decoration: none;
     font-weight: 600;
     font-size: var(--espacio-s);
-    margin: var(--espacio-xs);
 }
 
-/* Cambia el fondo y el texto del botón secundario al pasar el cursor
-   o cuando recibe el foco del teclado. */
 .boton-secundario:hover,
 .boton-secundario:focus {
     background-color: var(--azul-noche);
     color: var(--crema);
 }
 
-/* Agrupa los botones de acción, los separa y permite que cambien de fila. */
-.acciones {
-    display: flex;
-    gap: var(--espacio-s);
-    flex-wrap: wrap;
-}
-
 #secundarios a {
     color: var(--verde-ruta);
 }
 
-/* Distingue el enlace que tiene la clase activo en la página actual. */
-#menu a.activo {
-    background-color: var(--azul-noche);
-}
-
-/* Cambia el fondo de los enlaces del menú al pasar el cursor o recibir el foco. */
+#menu a.activo,
 #menu a:hover,
-#menu a:focus {
-    background-color: var(--azul-noche);
-}
-
-/* Cambia el fondo de los botones de acción al pasar el cursor o recibir el foco. */
+#menu a:focus,
 .boton-accion:hover,
 .boton-accion:focus {
     background-color: var(--azul-noche);
 }
 
-/* ==================================================
-   5. INICIO: PORTADA
-   Distribución del texto y la imagen principal.
-   ================================================== */
-
-/* Distribuye el texto y el bloque de imagen de la portada en columnas 1:2.
-   Los centra verticalmente y establece una altura mínima de 35vh. */
-.portada {
-    min-height: 35vh;
-
-}
-
-/* Define el tamaño de la imagen de portada, su margen exterior y sus esquinas. */
+/* Apariencia de las imágenes y tarjetas existentes. */
 .portada img {
-    display: block;
-    width: 35rem;
-    max-width: 100%;
-    height: auto;
-    margin: var(--espacio-xl) auto;
     border-radius: var(--espacio-s);
 }
 
-/* ==================================================
-   6. INICIO: FLOTA
-   Cuadrícula, tarjetas, imágenes y enlaces de las bicicletas.
-   ================================================== */
-
-/* Crea la cuadrícula adaptable de bicicletas con columnas de al menos 20rem.
-   Las columnas se reparten el espacio restante por igual. */
-
-
-/* Organiza el contenido de cada bicicleta en columna y define la caja de la tarjeta.
-   space-between reparte el espacio libre y lleva el último enlace al final. */
-#flota article {
-    position: relative;
+#flota article,
+.tarjeta {
     border: 2px solid var(--gris-asfalto);
     border-radius: var(--espacio-xs);
 }
 
-/* Ajusta las fotos de la flota al ancho de cada tarjeta, con altura automática
-   y sin el margen de la regla general img. */
-#flota img {
-    width: 100%;
-    height: auto;
-    margin: 0;
-}
-
-/* Da apariencia de botón a los enlaces Reservar ahora de la flota. */
 #flota a {
-    padding: var(--espacio-s);
     font-weight: 600;
     text-decoration: none;
     font-size: var(--espacio-s);
     background-color: var(--verde-ruta);
-    display: inline-block;
     color: var(--crema);
     border-radius: var(--espacio-xs);
 }
 
-/* Cambia el fondo de los enlaces de la flota al pasar el cursor o recibir el foco. */
-#flota a:hover, #flota a:focus {
-    background-color: var(--azul-noche)
+#flota a:hover,
+#flota a:focus {
+    background-color: var(--azul-noche);
 }
 
-/* ==================================================
-   7. INICIO: SERVICIOS
-   Tarjetas de servicios y etiqueta Nuevo.
-   ================================================== */
-
-/* Organiza los servicios en una cuadrícula que adapta la cantidad de columnas.
-   Cada columna tiene un mínimo de 20rem; el relleno es solo vertical. */
-.lista-servicios {
-    padding: var(--espacio-m) 0;
-    border-radius: var(--espacio-s);
-    gap: var(--espacio-s);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-}
-
-/* Organiza cada servicio en columna y define su borde, relleno y esquinas.
-   position: relative sirve de referencia para la etiqueta Nuevo. */
-.tarjeta {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid var(--gris-asfalto);
-    gap: var(--espacio-xs);
-    border-radius: var(--espacio-xs);
-    padding: var(--espacio-xs);
-}
-
-/* Añade margen a los párrafos y títulos dentro de las tarjetas de servicios. */
-.tarjeta p,
-.tarjeta h3 {
-    margin: var(--espacio-xs);
-}
-
-/* Ajusta las imágenes al ancho interior de las tarjetas y conserva sus proporciones.
-   margin: 0 sustituye aquí el margen de la regla general img. */
-.tarjeta img {
-    width: 100%;
-    height: auto;
-    margin: 0;
-}
-
-/* ==================================================
-   8. INICIO: RUTAS
-   Galería de recorridos y etiquetas de dificultad.
-   ================================================== */
-
-
-/* Dibuja un contorno y redondea las esquinas de cada tarjeta de ruta. */
 .rutas article {
     outline: 2px solid var(--gris-asfalto);
     border-radius: var(--espacio-xs);
 }
 
-/* Ajusta las imágenes de las rutas al ancho de la tarjeta, conserva sus proporciones
-   y añade relleno interior sin margen exterior. */
-.rutas img {
-    width: 100%;
-    margin: 0;
-    height: auto;
-    padding: var(--espacio-xs);
-}
-
-/* Añade espacio interior alrededor del nombre de cada ruta. */
-.rutas h3 {
-    padding: var(--espacio-s);
-}
-
-
-/* ==================================================
-   9. TARIFAS Y TABLAS
-   Bordes, celdas, encabezados y títulos de las tablas.
-   ================================================== */
-
-/* Une los bordes contiguos de las celdas de cada tabla. */
+/* Se conservan los estilos propios de las tablas de Tarifas. */
 table {
     border-collapse: collapse;
 }
 
-/* Define el borde y el relleno interior de todas las celdas. */
 th,
 td {
     border: 1px solid var(--gris-asfalto);
     padding: var(--espacio-m);
 }
 
-/* Aplica los colores generales a los encabezados de las tablas. */
 th {
     background-color: var(--verde-ruta);
     color: var(--crema);
 }
 
-/* Aplica fondo blanco a las celdas de datos. */
 td {
     background-color: var(--blanco);
 }
 
-/* Distingue los encabezados de fila con clase u usando fondo crema y texto gris. */
 .u {
     background-color: var(--crema);
     color: var(--gris-asfalto);
 }
 
-/* Coloca el título de cada tabla arriba y a la izquierda, con margen y relleno. */
 caption {
     font-size: var(--espacio-m);
     caption-side: top;
@@ -349,63 +142,12 @@ caption {
     padding: var(--espacio-m);
 }
 
-/* ==================================================
-   10. RESERVAS Y FORMULARIO
-   Distribución de la página, grupos, campos y estados de los controles.
-   ================================================== */
-
-/* Distribuye el formulario y la información de contacto en columnas 2:1, con separación. */
-.reservas {
-    gap: var(--espacio-s);
-    display: grid;
-    grid-template-columns: 2fr 1fr ;
-}
-
-/* Limita el ancho máximo de la sección del formulario al ancho de su contenedor. */
-.formulario-reserva {
-    max-width: 100%;
-}
-
-/* Convierte la sección del formulario en Grid.
-   order: -1 la coloca visualmente antes del bloque de horarios dentro de .reservas. */
-#formulario-reserva {
-    display: grid;
-    order: -1;
-}
-
-/* Define el borde, las esquinas y el margen exterior de cada grupo del formulario. */
+/* Bordes del formulario y estados de sus controles. */
 fieldset {
     border: 2px solid var(--gris-asfalto);
     border-radius: var(--espacio-xs);
-    margin: var(--espacio-s);
 }
 
-/* Coloca los dos campos de cada grupo separacion en columnas del mismo ancho. */
-#formulario-reserva .separacion {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--espacio-s);
-}
-
-/* Separa cada campo del siguiente mediante un margen inferior. */
-.campo {
-    margin-bottom: var(--espacio-s);
-}
-
-/* Los controles dentro de cada campo ocupan el ancho disponible. */
-.campo input,
-.campo select,
-.campo textarea {
-    width: 100%;
-}
-
-/* Coloca la etiqueta de cada campo en su propia línea y la separa del control. */
-.campo label {
-    display: block;
-    margin-bottom: var(--espacio-xs);
-}
-
-/* Muestra un contorno naranja al pasar el cursor por los controles. */
 input:hover,
 select:hover,
 textarea:hover {
@@ -413,8 +155,6 @@ textarea:hover {
     outline-offset: 2px;
 }
 
-/* Muestra un contorno azul cuando un control recibe el foco.
-   Esta regla aparece después de hover para que el foco prevalezca si coinciden. */
 input:focus,
 select:focus,
 textarea:focus {
@@ -422,142 +162,35 @@ textarea:focus {
     outline-offset: 2px;
 }
 
-/* ==================================================
-   11. PIE DE PÁGINA
-   Borde superior y distribución del contenido del pie.
-   ================================================== */
-
-/* Separa el pie del contenido anterior con un borde superior gris. */
+/* Pie de página y apariencia del acceso a WhatsApp. */
 footer {
     border-top: 5px solid var(--gris-asfalto);
 }
 
-/* Distribuye los bloques del pie en una fila, separados y alineados arriba. */
-.pie-contenido {
-    display: flex;
-    gap:var(--espacio-s);
-    align-items: flex-start;
-}
-
-/* ==================================================
-   12. ACCESO A WHATSAPP
-   Posición fija y estados del enlace de contacto.
-   ================================================== */
-
-/* Mantiene el enlace de WhatsApp fijo en la esquina inferior derecha de la ventana
-   y define su apariencia de botón. */
 .whatsapp {
-    display: inline-block;
-    padding: var(--espacio-m);
     background-color: var(--verde-ruta);
     color: var(--crema);
     border-radius: var(--espacio-xl);
     text-decoration: none;
-    position: fixed;
-    bottom: var(--espacio-m);
-    right: var(--espacio-m);
     font-weight: 600;
     font-family: var(--fuente-texto);
     border: 1px solid var(--crema);
 }
 
-/* Cambia el fondo de WhatsApp al pasar el cursor o recibir el foco. */
 .whatsapp:hover,
 .whatsapp:focus {
-    background-color: #14213D;
+    background-color: var(--azul-noche);
 }
 
-/* BASE MÓVIL: elementos uno debajo del otro. */
-.barra,
-#menu,
-.pie-contenido {
-    flex-direction: column;
-}
-
-/* La navegación ocupa todo el ancho disponible. */
-.barra nav,
-#menu {
-    width: 100%;
-}
-
-/* Cada opción del menú queda en su propia fila. */
-#menu {
-    margin: 0;
-    padding: 0;
-    align-items: stretch;
-    width: 100%;
-}
-
-#menu a {
-    display: block;
-    text-align: center;
-}
-
-/* Una sola columna para el contenido en móvil. */
-.lista-servicios,
-.reservas,
-#formulario-reserva .separacion {
-    grid-template-columns: minmax(0, 1fr);
-}
-
-/* TABLET: DESDE 768 PX. */
+/* Espaciado de las tablas que ya existía en la versión recibida. */
 @media (min-width: 768px) {
-    /* Encabezado, menú y pie recuperan la dirección horizontal. */
-    .barra,
-    #menu,
-    .pie-contenido {
-        flex-direction: row;
-    }
-
-    .barra nav,
-    #menu {
-        width: auto;
-    }
-
-    #menu {
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-
-    /* Servicios: columnas adaptables desde 768 px. */
-    .lista-servicios {
-        grid-template-columns: repeat(
-            auto-fit,
-            minmax(min(20rem, 100%), 1fr)
-        );
-    }
-
-    /* Dos rutas o campos relacionados por fila. */
-    .rutas,
-    #formulario-reserva .separacion {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .pie-contenido {
-        flex-wrap: wrap;
-    }
-
-    /* Ajustes de las tablas para pantallas mayores. */
-    table {
-        table-layout: auto;
-        font-size: 1rem;
-    }
-
     th,
     td {
         padding: var(--espacio-xs);
     }
 }
 
-/* ESCRITORIO: DESDE 1200 PX. */
 @media (min-width: 1200px) {
-
-    /* Formulario y contacto en proporción 2:1. */
-    .reservas {
-        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    }
-
     th,
     td {
         padding: var(--espacio-m);

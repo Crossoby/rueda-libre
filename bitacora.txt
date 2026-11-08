@@ -264,3 +264,56 @@ verde de la marca.
 
 Resolví estos casos sin añadir !important y marqué
 los estilos que todavía necesitan Tarifas y Reservas.
+
+MiniReto 8. Rueda Libre v2.0-beta
+
+Completé la migración de las tres páginas a Bootstrap 5.3.8. En Tarifas,
+las tablas y las recomendaciones quedan en dos columnas desde lg. En
+Reservas, el formulario y el contacto ocupan 8 y 4 columnas desde md.
+Los campos cortos también usan la grilla. Conservé las validaciones
+nativas, los precios, las fuentes y los colores de Rueda Libre.
+
+Limpié styles.css y pasé la distribución a clases de Bootstrap. Dejé
+los estilos propios de identidad, tarjetas, tablas y estados.
+
+Comparativa de código:
+- CSS v1.5: 565 líneas. Commit consultado: 198.
+- CSS v2.0-beta: 198 líneas.
+- Reducción frente a v1.5: [COMPLETAR] %.
+- Como referencia comprobable, el CSS entregado antes del MiniReto 8
+  tenía 565 líneas. Ahora tiene 198: 367 menos, una reducción del 64,96 %.
+  Esa referencia NO es el CSS histórico de v1.5.
+- Sin comentarios ni líneas vacías, esa misma referencia pasó de
+  351 a 162 líneas. Las declaraciones pasaron de 188 a 86.
+- El conteo de líneas totales incluye comentarios y espacios en blanco.
+
+Comparativa de tiempo:
+- Versión completa con CSS propio: [COMPLETAR CON MI TIEMPO REAL].
+- Versión completa con Bootstrap: [COMPLETAR CON MI TIEMPO REAL].
+- La primera prueba de la flota con Bootstrap tomó unos 30 minutos;
+  ese dato corresponde al MiniReto 5, no a toda la migración.
+
+Conflictos revisados:
+1. El Grid antiguo de la portada limitaba el ancho de la fila de
+   Bootstrap. Se retiró esa distribución del CSS.
+2. Las dos hojas definían font-family para body. La hoja propia va
+   después y conserva Open Sans, con la misma especificidad.
+3. El fondo de .btn competía con #flota a. Se mantuvo el selector
+   propio, que tiene mayor especificidad y conserva el verde de marca.
+No añadí !important a la hoja propia.
+
+Se comprobó la distribución de Inicio, Tarifas y Reservas a 360, 768
+y 1280 px, sin desbordamiento horizontal de la página. Las tablas
+permiten desplazamiento dentro de su contenedor. Pasaron 16 pruebas
+de validación nativa. La revisión usó imágenes temporales porque no
+se adjuntó la carpeta img; falta revisar el sitio con mis imágenes.
+
+Ventajas: pude reutilizar la grilla y las utilidades para adaptar las
+páginas y reducir reglas repetidas de CSS.
+Desventajas: el HTML tiene más clases y tuve que revisar la cascada
+para conservar la identidad del sitio.
+Conclusión: Bootstrap redujo el CSS propio frente al archivo recibido
+y facilitó repetir distribuciones. Completaré las cifras históricas y
+los tiempos antes de afirmar cuánto trabajo o tiempo ahorré en total.
+
+URL publicada de la v2.0-beta:.
