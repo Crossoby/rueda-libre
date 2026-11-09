@@ -79,6 +79,14 @@ img {
     background-color: var(--azul-noche);
 }
 
+.navbar-nav > .nav-item {
+    background-color: var(--bs-success);
+}
+
+.navbar-nav > .nav-item:has(> .nav-link.active) {
+    background-color: var(--azul-noche);
+}
+
 /* Apariencia de las imágenes y tarjetas existentes. */
 .portada img {
     border-radius: var(--espacio-s);

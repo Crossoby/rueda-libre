@@ -13,27 +13,29 @@
     </head>
     <body class="pb-5">
         <header class="encabezado">
-            <div class="barra d-flex flex-column flex-md-row flex-wrap justify-content-between align-items-center gap-3 p-3">
-                <div class="marca d-flex align-items-center gap-2">
-                    <a href="index.html">
-                        <img class="logo img-fluid m-3" src="img/logo.svg" alt="">
-                    </a>
-                    <h1>Rueda Libre</h1>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="Imagen del logo"></a>
+                    <h1 class="p-2">Rueda libre</h1>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 align-items-center">
+                            <li class="nav-item p-2 rounded m-2">
+                                <a class="nav-link active text-light" aria-current="page" href="index.html">Pagina Principal</a>
+                            </li>
+                            <li class="nav-item p-2 rounded m-2">
+                                <a class="nav-link text-light" href="../paginas/tarifas.html">Tarifas</a>
+                            </li>
+                            <li class="nav-item p-2 rounded m-2">
+                                <a class="nav-link text-light" href="../paginas/reservas.html">Reservas</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <nav aria-label="Navegación principal" class="col-12 col-md-auto">
-                    <ul id="menu" class="list-unstyled d-flex flex-column flex-md-row flex-wrap justify-content-md-end align-items-stretch align-items-md-center gap-3 m-0 p-0">
-                        <li>
-                            <a href="index.html" class="activo d-block text-center p-3 m-2" aria-current="page">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="paginas/tarifas.html" class="d-block text-center p-3 m-2">Tarifas</a>
-                        </li>
-                        <li>
-                            <a href="paginas/reservas.html" class="d-block text-center p-3 m-2">Reservas</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            </nav>
         </header>
         <main id="contenido" class="container">
             <section class="portada pt-4" aria-labelledby="titulo-portada">
