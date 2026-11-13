@@ -42,24 +42,6 @@ img {
     border-bottom: 5px solid var(--gris-asfalto);
 }
 
-#menu a,
-.boton-accion {
-    font-weight: 600;
-    text-decoration: none;
-    font-size: var(--espacio-s);
-    background-color: var(--verde-ruta);
-    color: var(--crema);
-    border-radius: var(--espacio-xs);
-}
-
-.boton-secundario {
-    background-color: var(--naranja-pedal);
-    color: var(--azul-noche);
-    border-radius: var(--espacio-xs);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: var(--espacio-s);
-}
 
 .boton-secundario:hover,
 .boton-secundario:focus {
@@ -71,11 +53,13 @@ img {
     color: var(--verde-ruta);
 }
 
-#menu a.activo,
-#menu a:hover,
-#menu a:focus,
-.boton-accion:hover,
-.boton-accion:focus {
+.navbar-nav > .nav-item {
+    background-color: var(--bs-success);
+}
+
+.navbar-nav > .nav-item:has(> .nav-link.active),
+.navbar-nav > .nav-item:hover,
+.navbar-nav > .nav-item:focus-within {
     background-color: var(--azul-noche);
 }
 
