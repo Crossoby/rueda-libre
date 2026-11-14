@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
     </head>
@@ -18,19 +19,19 @@
                     <a class="navbar-brand" href="../index.html"><img src="../img/logo.svg" alt="Imagen del logo"></a>
                     <h1 class="p-2">Rueda libre</h1>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Menú de navegación">
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                         <ul id="menu" class="navbar-nav ms-lg-auto mb-2 mb-lg-0 align-items-center">
                             <li class="nav-item m-2">
-                                <a class="nav-link p-3 rounded" href="../index.html">Pagina Principal</a>
+                                <a class="nav-link p-3 rounded" href="../index.html"><i class="bi bi-house-door me-2" aria-hidden="true"></i>Pagina Principal</a>
                             </li>
                             <li class="nav-item m-2">
-                                <a class="nav-link p-3 rounded active activo" aria-current="page" href="tarifas.html">Tarifas</a>
+                                <a class="nav-link p-3 rounded active activo" aria-current="page" href="tarifas.html"><i class="bi bi-tag me-2" aria-hidden="true"></i>Tarifas</a>
                             </li>
                             <li class="nav-item m-2">
-                                <a class="nav-link p-3 rounded" href="reservas.html">Reservas</a>
+                                <a class="nav-link p-3 rounded" href="reservas.html"><i class="bi bi-calendar-check me-2" aria-hidden="true"></i>Reservas</a>
                             </li>
                         </ul>
                     </div>
@@ -38,7 +39,7 @@
             </nav>
         </header>
         <main id="contenido" class="container py-4">
-            <h1>Tarifas y recorridos</h1>
+            <h1 class="titulo-seccion">Tarifas y recorridos</h1>
             <p>Escoge el plan que mejor se adapte a tu ruta. Todos los precios están en pesos colombianos (COP).</p>
             <div class="row g-4">
                 <div class="col-12 col-lg-8">
@@ -119,7 +120,7 @@
                     </section>
                 </div>
                 <section class="recomendaciones col-12 col-lg-4 align-content-start" id="contenido-complementario">
-                    <h2>¿Qué llevar?</h2>
+                    <h2 class="titulo-seccion">¿Qué llevar?</h2>
                     <ul>
                         <li>Ropa cómoda.</li>
                         <li>Agua.</li>
@@ -129,20 +130,20 @@
                 </section>
             </div>
             <div class="acciones d-flex flex-wrap gap-3">
-                <a href="reservas.html" class="btn btn-success boton-accion">Reservar ahora</a>
-                <a class="btn btn-success boton-accion" href="../index.html">Volver al inicio</a>
+                <a href="reservas.html" class="btn btn-primary">Reservar ahora</a>
+                <a class="btn btn-naranja-pedal" href="../index.html">Volver al inicio</a>
             </div>
         </main>
-        <footer class="pie" id="footer">
-            <div class="pie-contenido d-flex flex-column flex-md-row flex-wrap align-items-start gap-3 mb-5">
+        <footer class="pie pie-marca bg-success" id="footer">
+            <div class="pie-contenido container d-flex flex-column flex-md-row flex-wrap align-items-start gap-3 mb-5">
                 <p>
                     <strong>Rueda Libre</strong> · Medellín</p>
-                <p>Nuestro correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+                <p>Nuestro correo: <a href="mailto:hola@ruedalibre.example"><i class="bi bi-envelope me-2" aria-hidden="true"></i>hola@ruedalibre.example</a>
                 </p>
                 <p>2026</p>
             </div>
         </footer>
-        <a class="whatsapp d-inline-block p-4 position-fixed bottom-0 end-0 m-4" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: abrir en una nueva pestaña">WhatsApp ↗</a>
+        <a class="whatsapp d-inline-block p-4 position-fixed bottom-0 end-0 m-4" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: abrir en una nueva pestaña"><i class="bi bi-whatsapp me-2" aria-hidden="true"></i>WhatsApp</a>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 </html>

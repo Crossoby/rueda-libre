@@ -381,3 +381,45 @@ bloquea. Al corregir los campos, los mensajes desaparecen. También verifiqué
 los formatos y rangos, el cierre de la alerta y la apertura del modal con
 clic y Enter. El modal se cierra con su botón o con Esc y devuelve el foco
 al botón de políticas. Probé el formulario corregido con un envío simulado.
+
+MiniReto 12 — Rueda Libre v2.0 con identidad propia
+
+Resumen de la semana
+
+En el MiniReto 9 incorporé la navbar colapsable y unifiqué los botones.
+En el 10 resolví conflictos de especificidad y marqué los estados de foco.
+En el 11 añadí la validación visual, la alerta y el modal de Reservas.
+En el 12 apliqué la identidad de Rueda Libre a las tres páginas.
+
+Personalización
+
+En styles.css definí --bs-primary y --bs-primary-rgb con Verde Ruta.
+También configuré la tipografía del cuerpo, los enlaces y el radio de
+borde. El texto .text-primary de los beneficios y el fondo .bg-primary
+del pie toman el verde de las variables globales. Los botones leen sus
+propias variables --bs-btn-*. Usé Verde Ruta para reservar y creé
+.btn-naranja-pedal para las acciones secundarias.
+
+Apliqué .portada-marca, .titulo-seccion y .pie-marca. Cargué Bootstrap
+Icons por CDN y los usé en el menú, los datos de contacto, los beneficios
+y WhatsApp. Los iconos decorativos llevan aria-hidden y los controles de
+solo icono tienen aria-label.
+
+Pruebas y capturas
+
+Revisé Inicio, Tarifas y Reservas a 360, 768 y 1280 px. Probé el menú
+con clic, Tab y Enter, y el modal con Esc. Volví a comprobar el formulario
+vacío, las reglas de cada campo y un envío simulado con datos válidos.
+Verifiqué la estructura container > row > col, un bundle por página
+y la carga de styles.css después de Bootstrap, sin !important propio.
+
+El contraste mínimo de los textos comprobados fue de 4,53:1.
+En los estados normal, hover y active, respectivamente, el botón verde
+dio 4,93:1, 7,10:1, 9,50:1 y el naranja dio 7,17:1, 6,11:1, 5,07:1.
+
+Las capturas img/capturas/tarifas-antes.png e img/capturas/tarifas-despues.png
+comparan Tarifas desde su título hasta el pie a 1280 px. Las fotos y el
+logo se representaron con marcadores temporales durante las pruebas locales.
+
+La publicación de v2.0 queda pendiente del commit y el push a la rama
+que usa GitHub Pages.
