@@ -42,33 +42,59 @@ img {
     border-bottom: 5px solid var(--gris-asfalto);
 }
 
-
-.boton-secundario:hover,
-.boton-secundario:focus {
-    background-color: var(--azul-noche);
+#menu a {
+    background-color: var(--verde-ruta);
     color: var(--crema);
 }
 
-#secundarios a {
+#menu a.activo {
+    background-color: var(--azul-noche);
+    color: var(--crema);
+    font-weight: 600;
+}
+
+#menu a:hover,
+#menu a:focus {
+    background-color: var(--azul-noche);
+    color: var(--crema);
+    text-decoration: none;
+}
+
+.navbar-toggler:hover {
+    border-color: var(--azul-noche);
+}
+
+/* Enlaces de texto y botones de llamada a la acción. */
+main a:not(.btn),
+footer a {
     color: var(--verde-ruta);
 }
 
-.navbar-nav > .nav-item {
-    background-color: var(--bs-success);
+main a:not(.btn):hover,
+main a:not(.btn):focus,
+footer a:hover,
+footer a:focus {
+    color: var(--azul-noche);
 }
 
-.navbar-nav > .nav-item:has(> .nav-link.active),
-.navbar-nav > .nav-item:hover,
-.navbar-nav > .nav-item:focus-within {
+.boton-accion.btn-success {
+    background-color: var(--verde-ruta);
+    border-color: var(--verde-ruta);
+    color: var(--crema);
+}
+
+.boton-accion.btn-warning {
+    background-color: var(--naranja-pedal);
+    border-color: var(--naranja-pedal);
+    color: var(--azul-noche);
+}
+
+.btn.boton-accion:hover,
+.btn.boton-accion:focus,
+.btn.boton-accion:active {
     background-color: var(--azul-noche);
-}
-
-.navbar-nav > .nav-item {
-    background-color: var(--bs-success);
-}
-
-.navbar-nav > .nav-item:has(> .nav-link.active) {
-    background-color: var(--azul-noche);
+    border-color: var(--azul-noche);
+    color: var(--crema);
 }
 
 /* Apariencia de las imágenes y tarjetas existentes. */
@@ -80,20 +106,6 @@ img {
 .tarjeta {
     border: 2px solid var(--gris-asfalto);
     border-radius: var(--espacio-xs);
-}
-
-#flota a {
-    font-weight: 600;
-    text-decoration: none;
-    font-size: var(--espacio-s);
-    background-color: var(--verde-ruta);
-    color: var(--crema);
-    border-radius: var(--espacio-xs);
-}
-
-#flota a:hover,
-#flota a:focus {
-    background-color: var(--azul-noche);
 }
 
 .rutas article {
@@ -140,16 +152,22 @@ fieldset {
     border-radius: var(--espacio-xs);
 }
 
-input:hover,
-select:hover,
-textarea:hover {
-    outline: 2px solid var(--naranja-pedal);
+#formulario-reserva input:hover,
+#formulario-reserva select:hover,
+#formulario-reserva textarea:hover {
+    outline: 2px solid var(--verde-ruta);
     outline-offset: 2px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+/* El contorno indica el foco durante el recorrido con Tab. */
+a:focus-visible,
+#menu a:focus,
+.btn:focus,
+.navbar-toggler:focus,
+.tabla-contenedor:focus,
+#formulario-reserva input:focus-within,
+#formulario-reserva select:focus,
+#formulario-reserva textarea:focus {
     outline: 2px solid var(--azul-noche);
     outline-offset: 2px;
 }

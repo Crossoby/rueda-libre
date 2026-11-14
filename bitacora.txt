@@ -317,3 +317,44 @@ y facilitó repetir distribuciones. Completaré las cifras históricas y
 los tiempos antes de afirmar cuánto trabajo o tiempo ahorré en total.
 
 URL publicada de la v2.0-beta:.
+
+MiniReto 9 — Menú para el celular: navbar y botones
+Reemplacé el menú de Inicio, Tarifas y Reservas por una navbar de Bootstrap. Con navbar-expand-lg, los enlaces se muestran en fila desde 992 px y, por debajo de ese ancho, se despliegan con el botón hamburguesa. Dejé el logo y el nombre fuera del bloque collapse para que sigan visibles al cerrar el menú. Aprendí que data-bs-target debe apuntar al id del contenedor que abre y cierra el botón.
+
+Marqué la página actual con active y aria-current="page" y usé el fondo azul noche para distinguirla. Para unificar las llamadas a la acción, combiné btn con btn-success para reservar y btn-warning para consultar tarifas. En la portada usé btn-lg en ambos enlaces. Al revisar los estilos en DevTools, vi cómo las reglas del CSS propio podían tener prioridad sobre las de Bootstrap.
+
+Comprobé el cambio de distribución al llegar a 992 px. En la revisión a 360 px se verificó que el menú abre y cierra con clic y Enter, y que los enlaces se recorren con Tab. También se comprobó que cada página carga una sola vez bootstrap.bundle.min.js, antes de </body>.
+
+MiniReto 10 — Navegación con estados y sin conflictos
+
+Reproduje el conflicto en el inspector de Chromium con las reglas de la
+consigna. El enlace de la página actual coincidía con ambos selectores.
+
+    #menu a    → (1,0,1), un ID y una etiqueta.
+    .activo    → (0,1,0), una clase.
+    #menu a.activo → (1,1,1), un ID, una clase y una etiqueta.
+
+En Styles, el color de .activo queda tachado porque #menu a tiene un ID y
+gana al comparar la primera cifra. El font-weight de .activo sí se aplica.
+Corregí el selector a #menu a.activo. Ahora ambos selectores tienen un ID
+y la clase extra decide cuál gana. Usé crema sobre azul noche para
+identificar la página actual.
+
+La clase boton-accion comparte los estados de los botones de la portada,
+la flota, Cómo alquilar, Tarifas y el formulario. En el menú y los botones
+se ve el cambio de fondo al pasar el mouse. El contorno azul identifica
+el foco con Tab. En el campo de fecha, :focus-within lo mantiene visible
+al recorrer las partes internas del control.
+
+Contraste de las combinaciones usadas
+    Crema sobre verde ruta        4,93:1
+    Azul noche sobre naranja     7,17:1
+    Crema sobre azul noche       14,83:1
+
+Comprobé el menú con clic, Tab y Enter a 360 px en las tres páginas,
+y forcé :hover y :focus en el inspector de Chromium. Los botones de
+Tarifas quedaron en la misma fila a 360 px. El formulario conserva la
+validación nativa y los 11 campos responden al foco y al mouse.
+Las pruebas se hicieron con imágenes de referencia para suplir los
+archivos de img/ que no venían adjuntos.
+

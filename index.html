@@ -22,15 +22,15 @@
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 align-items-center">
-                            <li class="nav-item p-2 rounded m-2">
-                                <a class="nav-link active text-light" aria-current="page" href="index.html">Pagina Principal</a>
+                        <ul id="menu" class="navbar-nav ms-lg-auto mb-2 mb-lg-0 align-items-center">
+                            <li class="nav-item m-2">
+                                <a class="nav-link p-3 rounded active activo" aria-current="page" href="index.html">Pagina Principal</a>
                             </li>
-                            <li class="nav-item p-2 rounded m-2">
-                                <a class="nav-link text-light" href="../paginas/tarifas.html">Tarifas</a>
+                            <li class="nav-item m-2">
+                                <a class="nav-link p-3 rounded" href="paginas/tarifas.html">Tarifas</a>
                             </li>
-                            <li class="nav-item p-2 rounded m-2">
-                                <a class="nav-link text-light" href="../paginas/reservas.html">Reservas</a>
+                            <li class="nav-item m-2">
+                                <a class="nav-link p-3 rounded" href="paginas/reservas.html">Reservas</a>
                             </li>
                         </ul>
                     </div>
@@ -46,8 +46,8 @@
                         <p>Bienvenido a Rueda Libre, un espacio donde podrás encontrar tu compañera de rutas para atravesar
                         Medellín y sus ciudades aledañas. Sumérgete y da el primer pedalazo con nosotros.</p>
                         <div class="acciones d-flex flex-wrap gap-3">
-                            <a href="paginas/reservas.html" class="btn btn-success btn-lg m-2 boton-secundario">Reservar ahora</a>
-                            <a href="paginas/tarifas.html" class="btn btn-warning btn-lg m-2 boton-secundario">Consultar tarifas</a>
+                            <a href="paginas/reservas.html" class="btn btn-success btn-lg m-2 boton-accion">Reservar ahora</a>
+                            <a href="paginas/tarifas.html" class="btn btn-warning btn-lg m-2 boton-accion">Consultar tarifas</a>
                         </div>
                         <div id="secundarios">
                             <a href="#encuentranos">Encuéntranos</a> · <a href="mailto:hola@ruedalibre.example">Escríbenos</a>
@@ -75,7 +75,7 @@
                                 <p class="card-text">Cómoda y liviana para las ciclorrutas, su precio por hora esta a
                                     <strong>10.000</strong>
                                 </p>
-                                <a href="paginas/reservas.html" class="btn btn-success btn-lg btn-success p-3 d-inline-block">Reservar ahora</a>
+                                <a href="paginas/reservas.html" class="btn btn-success btn-lg boton-accion">Reservar ahora</a>
                             </div>
                         </article>
                     </div>
@@ -88,7 +88,7 @@
                                     por
                                     hora esta a <strong>12.000</strong>
                                 </p>
-                                <a href="paginas/reservas.html" class="btn btn-success btn-lg btn-success p-3 d-inline-block">Reservar ahora</a>
+                                <a href="paginas/reservas.html" class="btn btn-success btn-lg boton-accion">Reservar ahora</a>
                             </div>
                         </article>
                     </div>
@@ -101,7 +101,7 @@
                                     hora
                                     esta a <strong>15.000</strong>
                                 </p>
-                                <a href="paginas/reservas.html" class="btn btn-success btn-lg btn-success p-3 d-inline-block">Reservar ahora</a>
+                                <a href="paginas/reservas.html" class="btn btn-success btn-lg boton-accion">Reservar ahora</a>
                             </div>
                         </article>
                     </div>
@@ -113,7 +113,7 @@
                                 <p class="card-text">Para rutas mixtas de asfalto y destapado, su precio por hora esta a
                                     <strong>18.000</strong>
                                 </p>
-                                <a href="paginas/reservas.html" class="btn btn-success btn-lg btn-success p-3 d-inline-block">Reservar ahora</a>
+                                <a href="paginas/reservas.html" class="btn btn-success btn-lg boton-accion">Reservar ahora</a>
                             </div>
                         </article>
                     </div>
@@ -126,7 +126,7 @@
                                     a
                                     <strong>25.000</strong>
                                 </p>
-                                <a href="paginas/reservas.html" class="btn btn-success btn-lg btn-success p-3 d-inline-block">Reservar ahora</a>
+                                <a href="paginas/reservas.html" class="btn btn-success btn-lg boton-accion">Reservar ahora</a>
                             </div>
                         </article>
                     </div>
@@ -138,7 +138,7 @@
                                 <p class="card-text">Para niños de 6 a 10 años, su precio por hora esta a
                                     <strong>8.000</strong>
                                 </p>
-                                <a href="paginas/reservas.html" class="btn btn-success btn-lg btn-success p-3 d-inline-block">Reservar ahora</a>
+                                <a href="paginas/reservas.html" class="btn btn-success btn-lg boton-accion">Reservar ahora</a>
                             </div>
                         </article>
                     </div>
@@ -151,7 +151,7 @@
                                     hora
                                     esta a <strong>20.000</strong>
                                 </p>
-                                <a href="paginas/reservas.html" class="btn btn-success btn-lg btn-success p-3 d-inline-block">Reservar ahora</a>
+                                <a href="paginas/reservas.html" class="btn btn-success btn-lg boton-accion">Reservar ahora</a>
                             </div>
                         </article>
                     </div>
@@ -276,8 +276,8 @@
                             <strong>Recoge y disfruta.</strong> Comienza tu aventura sobre ruedas.</li>
                     </ol>
                     <div class="acciones d-flex flex-wrap gap-3">
-                        <a href="paginas/reservas.html" class="boton-accion d-inline-block p-3 m-2 btn btn-success">Reservar ahora</a>
-                        <a href="paginas/tarifas.html" class="boton-accion d-inline-block p-3 m-2 btn btn-warning">Consultar tarifas de alquiler</a>
+                        <a href="paginas/reservas.html" class="btn btn-success btn-lg m-2 boton-accion">Reservar ahora</a>
+                        <a href="paginas/tarifas.html" class="btn btn-warning btn-lg m-2 boton-accion">Consultar tarifas de alquiler</a>
                     </div>
                 </div>
                 <img class="imagen-alquiler img-fluid d-block my-4 mx-auto" src="img/imagenruta.jpg" alt="Bicicleta urbana disponible como referencia de alquiler" loading="lazy">
