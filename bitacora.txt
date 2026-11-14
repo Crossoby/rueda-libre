@@ -358,3 +358,26 @@ validación nativa y los 11 campos responden al foco y al mouse.
 Las pruebas se hicieron con imágenes de referencia para suplir los
 archivos de img/ que no venían adjuntos.
 
+MiniReto 11 — Reservas confiables: validación visual, alerta y modal
+
+Apliqué form-label, form-control, form-select y las clases form-check
+al formulario de Reservas. Conservé las reglas de HTML, como required,
+pattern, minlength, maxlength, min, max y step.
+
+Copié el script oficial de Bootstrap y añadí needs-validation y novalidate
+al formulario. Aprendí que novalidate evita los avisos automáticos del
+navegador. El script usa checkValidity() para comprobar las reglas de HTML,
+bloquea el envío si hay errores y añade was-validated para mostrar los
+estados de Bootstrap. Asocié los nueve mensajes invalid-feedback a sus
+campos con aria-describedby.
+https://getbootstrap.com/docs/5.3/forms/validation/#custom-styles
+
+Añadí una alerta que recuerda traer el documento de identidad original.
+Junto a la casilla de aceptación coloqué el botón que abre el modal con
+las cinco políticas de alquiler.
+
+En Chromium comprobé que el envío vacío muestra los nueve avisos y se
+bloquea. Al corregir los campos, los mensajes desaparecen. También verifiqué
+los formatos y rangos, el cierre de la alerta y la apertura del modal con
+clic y Enter. El modal se cierra con su botón o con Esc y devuelve el foco
+al botón de políticas. Probé el formulario corregido con un envío simulado.

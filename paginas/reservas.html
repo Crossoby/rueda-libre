@@ -41,28 +41,36 @@
             <p>Elige tu bicicleta, la fecha y el tiempo que necesitas para tu próxima ruta.</p>
             <div class="reservas row g-4">
                 <section class="formulario-reserva col-12 col-md-8" id="formulario-reserva" aria-label="Formulario de reserva">
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        <strong>Recuerda:</strong> trae tu documento de identidad original al recoger la bicicleta.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar aviso"></button>
+                    </div>
                     <!-- Conecta action a un servicio de reservas antes de usarlo con clientes. -->
-                    <form method="post" aria-describedby="aviso-formulario">
+                    <form method="post" class="needs-validation" novalidate>
                         <fieldset class="m-3 p-3">
                             <legend class="float-none w-auto px-2">Llena tus datos para reservar</legend>
                             <div class="separacion row g-3 mb-3">
                                 <div class="campo col-12 col-md-6">
-                                    <label for="nombre" class="d-block mb-2">Nombre completo</label>
-                                    <input type="text" id="nombre" name="nombre" minlength="3" placeholder="Ej. Emmanuel Silva" autocomplete="name" required class="w-100">
+                                    <label for="nombre" class="form-label">Nombre completo</label>
+                                    <input type="text" id="nombre" name="nombre" minlength="3" placeholder="Ej. Emmanuel Silva" autocomplete="name" required class="form-control" aria-describedby="error-nombre">
+                                    <div id="error-nombre" class="invalid-feedback text-danger-emphasis">Escribe tu nombre completo con al menos 3 caracteres.</div>
                                 </div>
                                 <div class="campo col-12 col-md-6">
-                                    <label for="documento" class="d-block mb-2">Documento</label>
-                                    <input type="text" id="documento" name="documento" pattern="[0-9]{6,10}" minlength="6" maxlength="10" inputmode="numeric" placeholder="Ej. 1234567890" required class="w-100">
+                                    <label for="documento" class="form-label">Documento</label>
+                                    <input type="text" id="documento" name="documento" pattern="[0-9]{6,10}" minlength="6" maxlength="10" inputmode="numeric" placeholder="Ej. 1234567890" required class="form-control" aria-describedby="error-documento">
+                                    <div id="error-documento" class="invalid-feedback text-danger-emphasis">Ingresa un número de documento de 6 a 10 dígitos, sin espacios ni puntos.</div>
                                 </div>
                             </div>
                             <div class="separacion row g-3 mb-3">
                                 <div class="campo col-12 col-md-6">
-                                    <label for="email" class="d-block mb-2">Correo electrónico</label>
-                                    <input type="email" id="email" name="email" placeholder="Ej. example@outlook.com" autocomplete="email" required class="w-100">
+                                    <label for="email" class="form-label">Correo electrónico</label>
+                                    <input type="email" id="email" name="email" placeholder="Ej. example@outlook.com" autocomplete="email" required class="form-control" aria-describedby="error-email">
+                                    <div id="error-email" class="invalid-feedback text-danger-emphasis">Escribe un correo válido, por ejemplo, nombre@correo.com.</div>
                                 </div>
                                 <div class="campo col-12 col-md-6">
-                                    <label for="telefono" class="d-block mb-2">Número de celular</label>
-                                    <input type="tel" id="telefono" name="telefono" pattern="3[0-9]{9}" placeholder="Ej. 3103408197" autocomplete="tel" required class="w-100">
+                                    <label for="telefono" class="form-label">Número de celular</label>
+                                    <input type="tel" id="telefono" name="telefono" pattern="3[0-9]{9}" placeholder="Ej. 3103408197" autocomplete="tel" required class="form-control" aria-describedby="error-telefono">
+                                    <div id="error-telefono" class="invalid-feedback text-danger-emphasis">Ingresa un número de celular de 10 dígitos que empiece por 3.</div>
                                 </div>
                             </div>
                         </fieldset>
@@ -70,30 +78,33 @@
                             <legend class="float-none w-auto px-2">Tu alquiler</legend>
                             <div class="row g-3">
                                 <div class="campo col-12 col-md-6">
-                                    <label for="fecha" class="d-block mb-2">Fecha de reserva</label>
-                                    <input type="date" id="fecha" name="fecha" min="2026-11-01" max="2026-12-31" required class="w-100">
+                                    <label for="fecha" class="form-label">Fecha de reserva</label>
+                                    <input type="date" id="fecha" name="fecha" min="2026-11-01" max="2026-12-31" required class="form-control" aria-describedby="error-fecha">
+                                    <div id="error-fecha" class="invalid-feedback text-danger-emphasis">Elige una fecha entre el 1 de noviembre y el 31 de diciembre de 2026.</div>
                                 </div>
                                 <div class="campo col-12 col-md-6">
-                                    <label for="tipo-bicicleta" class="d-block mb-2">Tipo de bicicleta</label>
-                                    <select name="tipo-bicicleta" id="tipo-bicicleta" required class="w-100">
+                                    <label for="tipo-bicicleta" class="form-label">Tipo de bicicleta</label>
+                                    <select name="tipo-bicicleta" id="tipo-bicicleta" required class="form-select" aria-describedby="error-tipo-bicicleta">
                                         <option value="" selected disabled>Selecciona tu tipo de bicicleta</option>
                                         <option value="urbana">Urbana</option>
                                         <option value="montana">Montaña</option>
                                         <option value="electrica">Eléctrica</option>
                                     </select>
+                                    <div id="error-tipo-bicicleta" class="invalid-feedback text-danger-emphasis">Selecciona el tipo de bicicleta que deseas alquilar.</div>
                                 </div>
                                 <div class="campo col-12 col-md-6">
-                                    <label for="hora" class="d-block mb-2">¿Qué plan deseas?</label>
-                                    <select name="hora" id="hora" required class="w-100">
+                                    <label for="hora" class="form-label">¿Qué plan deseas?</label>
+                                    <select name="hora" id="hora" required class="form-select" aria-describedby="error-hora">
                                         <option value="" selected disabled>Selecciona la duración</option>
                                         <option value="una">1 hora</option>
                                         <option value="medio-dia">Medio día (4 h)</option>
                                         <option value="dia">Día completo</option>
                                     </select>
+                                    <div id="error-hora" class="invalid-feedback text-danger-emphasis">Selecciona cuánto tiempo quieres alquilar la bicicleta.</div>
                                 </div>
                                 <div class="campo col-12 col-md-6">
-                                    <label for="ruta" class="d-block mb-2">¿Deseas una ruta guiada?</label>
-                                    <select name="ruta" id="ruta" class="w-100">
+                                    <label for="ruta" class="form-label">¿Deseas una ruta guiada?</label>
+                                    <select name="ruta" id="ruta" class="form-select">
                                         <option value="ninguna" selected>Ninguna</option>
                                         <option value="rios">Ríos y parques (12 km)</option>
                                         <option value="sabores">Sabores de barrio (18 km)</option>
@@ -101,19 +112,24 @@
                                     </select>
                                 </div>
                                 <div class="campo col-12 col-md-6">
-                                    <label for="cantidad" class="d-block mb-2">¿Cuántas bicicletas deseas alquilar?</label>
-                                    <input type="number" id="cantidad" name="cantidad" min="1" max="6" step="1" placeholder="Ej. 3" required class="w-100">
+                                    <label for="cantidad" class="form-label">¿Cuántas bicicletas deseas alquilar?</label>
+                                    <input type="number" id="cantidad" name="cantidad" min="1" max="6" step="1" placeholder="Ej. 3" required class="form-control" aria-describedby="error-cantidad">
+                                    <div id="error-cantidad" class="invalid-feedback text-danger-emphasis">Ingresa una cantidad entera entre 1 y 6 bicicletas.</div>
                                 </div>
                                 <div class="campo col-12">
-                                    <label for="comentarios" class="d-block mb-2">Comentarios (opcional)</label>
-                                    <textarea name="comentarios" id="comentarios" maxlength="300" placeholder="Máximo 300 caracteres" class="w-100"></textarea>
+                                    <label for="comentarios" class="form-label">Comentarios (opcional)</label>
+                                    <textarea name="comentarios" id="comentarios" maxlength="300" placeholder="Máximo 300 caracteres" class="form-control"></textarea>
                                 </div>
                             </div>
                         </fieldset>
                         <fieldset class="confirmacion m-3 p-3">
                             <legend class="float-none w-auto px-2">Confirmación</legend>
-                            <input type="checkbox" id="confirmacion" name="confirmacion" required>
-                            <label for="confirmacion">Confirmo los datos y acepto las políticas de alquiler.</label>
+                            <div class="form-check">
+                                <input type="checkbox" id="confirmacion" name="confirmacion" required class="form-check-input" aria-describedby="error-confirmacion">
+                                <label for="confirmacion" class="form-check-label text-body">Confirmo los datos y acepto las políticas de alquiler.</label>
+                                <div id="error-confirmacion" class="invalid-feedback text-danger-emphasis">Marca la casilla para confirmar tus datos y aceptar las políticas de alquiler.</div>
+                            </div>
+                            <button type="button" class="btn btn-warning btn-sm boton-accion mt-2" data-bs-toggle="modal" data-bs-target="#politicas-alquiler">Ver políticas de alquiler</button>
                         </fieldset>
                         <button type="submit" class="btn btn-success btn-lg m-2 boton-accion">Reservar mi cupo</button>
                     </form>
@@ -145,6 +161,48 @@
             </div>
         </footer>
         <a class="whatsapp d-inline-block p-4 position-fixed bottom-0 end-0 m-4" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: abrir en una nueva pestaña">WhatsApp ↗</a>
+        <div class="modal fade" id="politicas-alquiler" tabindex="-1" aria-labelledby="titulo-politicas-alquiler" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="titulo-politicas-alquiler">Políticas de alquiler</h2>
+                    </div>
+                    <div class="modal-body">
+                        <ol class="mb-0">
+                            <li>Presenta tu documento de identidad original al recoger la bicicleta.</li>
+                            <li>Revisa la bicicleta con el asesor antes de salir.</li>
+                            <li>Cada 15 minutos de retraso en la devolución tienen un recargo de $5.000.</li>
+                            <li>Los daños por mal uso se cobran según el costo de la reparación.</li>
+                            <li>Los menores de edad deben estar acompañados por un adulto responsable.</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+            'use strict'
+
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+              // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                form.classList.add('was-validated')
+                }, false)
+                })
+            })()
+        </script>
     </body>
 </html>
