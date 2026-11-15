@@ -7,29 +7,157 @@
     <link rel="stylesheet" href="src/output.css">
 </head>
 <body class="bg-slate-950 text-slate-100">
-    <main class="flex min-h-screen items-center p-5 sm:p-10">
-        <section class="mx-auto w-full max-w-3xl space-y-8 bg-slate-900 p-6 sm:p-12" aria-labelledby="titulo-nocturna">
-            <header class="space-y-4">
-                <p class="w-fit bg-lime-300/10 px-3 py-2 text-xs font-bold uppercase tracking-widest text-lime-300">Nuevo · Jueves a sábado</p>
-                <h1 class="text-5xl font-black leading-tight tracking-tight text-white sm:text-7xl" id="titulo-nocturna">Rueda Nocturna</h1>
-                <p class="max-w-md text-lg leading-relaxed text-slate-300 sm:text-xl">Descubre Medellín en bici cuando se encienden las luces</p>
+    <main class="px-5 sm:px-10">
+        <div class="flex min-h-screen items-center py-5 sm:py-10">
+            <section class="mx-auto w-full max-w-3xl space-y-8 bg-slate-900 p-6 sm:p-12" aria-labelledby="titulo-nocturna">
+                <header class="space-y-4">
+                    <p class="w-fit bg-lime-300/10 px-3 py-2 text-xs font-bold uppercase tracking-widest text-lime-300">Nuevo · Jueves a sábado</p>
+                    <h1 class="text-5xl font-black leading-tight tracking-tight text-white sm:text-7xl" id="titulo-nocturna">Rueda Nocturna</h1>
+                    <p class="max-w-md text-lg leading-relaxed text-slate-300 sm:text-xl">Descubre Medellín en bici cuando se encienden las luces</p>
+                </header>
+
+                <ul class="flex flex-wrap gap-3 text-sm font-semibold text-slate-200">
+                    <li class="bg-slate-800 px-4 py-2">3 rutas</li>
+                    <li class="bg-slate-800 px-4 py-2">Desde $55.000</li>
+                </ul>
+
+                <div class="flex flex-wrap gap-3">
+                    <a href="../paginas/reservas.html"
+                        class="inline-block rounded-lg border border-transparent bg-lime-300 px-5 py-3 font-bold text-slate-950 shadow-sm
+                            hover:bg-lime-200 focus:outline-hidden focus:ring-2 focus:ring-lime-300 focus:ring-offset-2 focus:ring-offset-slate-900">Inscríbete</a>
+                    <button type="button"
+                        class="cursor-pointer rounded-lg border border-transparent bg-slate-700 px-5 py-3 font-bold text-white shadow-sm
+                            hover:bg-slate-600 focus:outline-hidden focus:ring-2 focus:ring-slate-200 focus:ring-offset-2 focus:ring-offset-slate-900">Secundario</button>
+                    <button type="button"
+                        class="cursor-pointer rounded-lg border border-lime-300 bg-transparent px-5 py-3 font-bold text-lime-300 shadow-sm
+                            hover:bg-lime-300/15 focus:outline-hidden focus:ring-2 focus:ring-lime-300 focus:ring-offset-2 focus:ring-offset-slate-900">Contorno</button>
+                </div>
+            </section>
+        </div>
+
+        <section id="rutas" class="mx-auto w-full max-w-3xl space-y-6 pb-12 sm:pb-16" aria-labelledby="titulo-rutas">
+            <header class="space-y-2">
+                <h2 class="text-3xl font-bold tracking-tight text-white" id="titulo-rutas">Rutas</h2>
+                <p class="text-slate-300">Todas incluyen bicicleta, casco, luces LED, chaleco reflectivo y guía.</p>
             </header>
 
-            <ul class="flex flex-wrap gap-3 text-sm font-semibold text-slate-200">
-                <li class="bg-slate-800 px-4 py-2">3 rutas</li>
-                <li class="bg-slate-800 px-4 py-2">Desde $55.000</li>
-            </ul>
+            <div class="space-y-6">
+                <article class="overflow-hidden rounded-2xl border border-slate-700 bg-slate-900 shadow-lg shadow-black/20 transition-shadow hover:shadow-xl hover:shadow-lime-300/15">
+                    <figure>
+                        <img src="img/luces-del-centro.jpg" class="h-48 w-full object-cover object-[center_60%] sm:h-72"
+                            alt="Edificio Carré iluminado de noche en el centro de Medellín" loading="lazy">
+                        <figcaption class="px-6 pt-3 text-xs text-slate-400">
+                            <a href="https://commons.wikimedia.org/wiki/File:Edificio_Carre-Noche-Medellin.JPG" class="underline">SajoR · Wikimedia Commons</a>
+                            · <a href="https://creativecommons.org/licenses/by-sa/2.5/" class="underline">CC BY-SA 2.5</a>
+                        </figcaption>
+                    </figure>
+                    <div class="space-y-5 p-6">
+                        <header class="space-y-2">
+                            <p class="w-fit rounded-full px-3 py-1 text-sm font-bold bg-emerald-900 text-emerald-200">Fácil</p>
+                            <h3 class="text-2xl font-bold text-white">Luces del Centro</h3>
+                        </header>
 
-            <div class="flex flex-wrap gap-3">
-                <a href="../paginas/reservas.html"
-                    class="inline-block rounded-lg border border-transparent bg-lime-300 px-5 py-3 font-bold text-slate-950 shadow-sm
-                        hover:bg-lime-200 focus:outline-hidden focus:ring-2 focus:ring-lime-300 focus:ring-offset-2 focus:ring-offset-slate-900">Inscríbete</a>
-                <button type="button"
-                    class="cursor-pointer rounded-lg border border-transparent bg-slate-700 px-5 py-3 font-bold text-white shadow-sm
-                        hover:bg-slate-600 focus:outline-hidden focus:ring-2 focus:ring-slate-200 focus:ring-offset-2 focus:ring-offset-slate-900">Secundario</button>
-                <button type="button"
-                    class="cursor-pointer rounded-lg border border-lime-300 bg-transparent px-5 py-3 font-bold text-lime-300 shadow-sm
-                        hover:bg-lime-300/15 focus:outline-hidden focus:ring-2 focus:ring-lime-300 focus:ring-offset-2 focus:ring-offset-slate-900">Contorno</button>
+                        <dl class="flex flex-wrap gap-x-8 gap-y-3">
+                            <div>
+                                <dt class="text-xs font-medium text-slate-400">Distancia</dt>
+                                <dd class="font-semibold text-slate-100">10 km</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs font-medium text-slate-400">Duración</dt>
+                                <dd class="font-semibold text-slate-100">2 h</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs font-medium text-slate-400">Punto de encuentro</dt>
+                                <dd class="font-semibold text-slate-100">Sede de Rueda Libre</dd>
+                            </div>
+                        </dl>
+
+                        <div class="flex flex-wrap items-center gap-4">
+                            <p class="text-2xl font-bold text-white">$55.000</p>
+                            <a href="../paginas/reservas.html"
+                                class="inline-block rounded-lg border border-transparent bg-lime-300 px-5 py-3 font-bold text-slate-950 shadow-sm
+                                    hover:bg-lime-200 focus:outline-hidden focus:ring-2 focus:ring-lime-300 focus:ring-offset-2 focus:ring-offset-slate-900">Inscríbete</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="overflow-hidden rounded-2xl border border-slate-700 bg-slate-900 shadow-lg shadow-black/20 transition-shadow hover:shadow-xl hover:shadow-lime-300/15">
+                    <figure>
+                        <img src="img/miradores-de-la-ciudad.jpg" class="h-48 w-full object-cover object-[center_60%] sm:h-72"
+                            alt="Luces nocturnas de Medellín vistas desde el cerro Nutibara" loading="lazy">
+                        <figcaption class="px-6 pt-3 text-xs text-slate-400">
+                            <a href="https://commons.wikimedia.org/wiki/File:Noche_en_Medellin.jpg" class="underline">laloking97 · Wikimedia Commons</a>
+                            · <a href="https://creativecommons.org/licenses/by-sa/2.0/" class="underline">CC BY-SA 2.0</a>
+                        </figcaption>
+                    </figure>
+                    <div class="space-y-5 p-6">
+                        <header class="space-y-2">
+                            <p class="w-fit rounded-full px-3 py-1 text-sm font-bold bg-amber-900 text-amber-200">Medio</p>
+                            <h3 class="text-2xl font-bold text-white">Miradores de la Ciudad</h3>
+                        </header>
+
+                        <dl class="flex flex-wrap gap-x-8 gap-y-3">
+                            <div>
+                                <dt class="text-xs font-medium text-slate-400">Distancia</dt>
+                                <dd class="font-semibold text-slate-100">16 km</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs font-medium text-slate-400">Duración</dt>
+                                <dd class="font-semibold text-slate-100">3 h</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs font-medium text-slate-400">Punto de encuentro</dt>
+                                <dd class="font-semibold text-slate-100">Sede de Rueda Libre</dd>
+                            </div>
+                        </dl>
+
+                        <div class="flex flex-wrap items-center gap-4">
+                            <p class="text-2xl font-bold text-white">$75.000</p>
+                            <a href="../paginas/reservas.html"
+                                class="inline-block rounded-lg border border-transparent bg-lime-300 px-5 py-3 font-bold text-slate-950 shadow-sm
+                                    hover:bg-lime-200 focus:outline-hidden focus:ring-2 focus:ring-lime-300 focus:ring-offset-2 focus:ring-offset-slate-900">Inscríbete</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="overflow-hidden rounded-2xl border border-slate-700 bg-slate-900 shadow-lg shadow-black/20 transition-shadow hover:shadow-xl hover:shadow-lime-300/15">
+                    <figure>
+                        <img src="img/luna-en-las-palmas.jpg" class="h-48 w-full object-cover object-[center_60%] sm:h-72"
+                            alt="Vista nocturna de Medellín desde el Alto de Las Palmas" loading="lazy">
+                        <figcaption class="px-6 pt-3 text-xs text-slate-400">
+                            <a href="https://commons.wikimedia.org/wiki/File:Medell%C3%ADn_Night_View.jpg" class="underline">AlejoSaldarriaga · Wikimedia Commons</a>
+                            · <a href="https://commons.wikimedia.org/wiki/Template:PD-author" class="underline">Dominio público</a>
+                        </figcaption>
+                    </figure>
+                    <div class="space-y-5 p-6">
+                        <header class="space-y-2">
+                            <p class="w-fit rounded-full px-3 py-1 text-sm font-bold bg-rose-900 text-rose-200">Difícil</p>
+                            <h3 class="text-2xl font-bold text-white">Luna en Las Palmas</h3>
+                        </header>
+
+                        <dl class="flex flex-wrap gap-x-8 gap-y-3">
+                            <div>
+                                <dt class="text-xs font-medium text-slate-400">Distancia</dt>
+                                <dd class="font-semibold text-slate-100">22 km</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs font-medium text-slate-400">Duración</dt>
+                                <dd class="font-semibold text-slate-100">3,5 h</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs font-medium text-slate-400">Punto de encuentro</dt>
+                                <dd class="font-semibold text-slate-100">Sede de Rueda Libre</dd>
+                            </div>
+                        </dl>
+
+                        <div class="flex flex-wrap items-center gap-4">
+                            <p class="text-2xl font-bold text-white">$95.000</p>
+                            <a href="../paginas/reservas.html"
+                                class="inline-block rounded-lg border border-transparent bg-lime-300 px-5 py-3 font-bold text-slate-950 shadow-sm
+                                    hover:bg-lime-200 focus:outline-hidden focus:ring-2 focus:ring-lime-300 focus:ring-offset-2 focus:ring-offset-slate-900">Inscríbete</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
