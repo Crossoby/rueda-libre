@@ -423,3 +423,19 @@ logo se representaron con marcadores temporales durante las pruebas locales.
 
 La publicación de v2.0 queda pendiente del commit y el push a la rama
 que usa GitHub Pages.
+
+MiniReto 1 de Tailwind CSS — Prototipo nocturno con Play CDN
+
+En la semana 2 trabajé el enlace «Reservar ahora» de Rueda Libre como un
+botón de Bootstrap. En la versión 2.0 usé btn para la base del componente
+y btn-primary para la variante principal con el color Verde Ruta.
+
+En el prototipo de Rueda Nocturna di apariencia de botón al enlace
+«Inscríbete» con inline-block para formar una caja, px-6 y py-3 para el
+espaciado, bg-lime-300 para el fondo, y text-slate-950 y font-bold para el
+texto. Con hover:bg-lime-200 el fondo cambia al pasar el mouse.
+
+En un framework de componentes, como Bootstrap, parto del estilo base de
+un botón y selecciono una variante. Con el enfoque utility-first de Tailwind,
+compongo el estilo en el HTML con clases que controlan detalles concretos
+como el relleno, el color de fondo o el peso del texto.
