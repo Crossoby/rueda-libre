@@ -9,17 +9,25 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-amber-900: oklch(41.4% 0.112 45.904);
+    --color-amber-950: oklch(27.9% 0.077 45.635);
     --color-lime-200: oklch(93.8% 0.127 124.321);
     --color-lime-300: oklch(89.7% 0.196 126.665);
     --color-emerald-200: oklch(90.5% 0.093 164.15);
+    --color-emerald-400: oklch(76.5% 0.177 163.223);
     --color-emerald-900: oklch(37.8% 0.077 168.94);
+    --color-emerald-950: oklch(26.2% 0.051 172.552);
+    --color-sky-200: oklch(90.1% 0.058 230.902);
+    --color-sky-400: oklch(74.6% 0.16 232.661);
+    --color-sky-950: oklch(29.3% 0.066 243.157);
     --color-rose-200: oklch(89.2% 0.058 10.001);
     --color-rose-900: oklch(41% 0.159 10.272);
     --color-slate-100: oklch(96.8% 0.007 247.896);
     --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-slate-300: oklch(86.9% 0.022 252.894);
     --color-slate-400: oklch(70.4% 0.04 256.788);
+    --color-slate-500: oklch(55.4% 0.046 257.417);
     --color-slate-600: oklch(44.6% 0.043 257.281);
     --color-slate-700: oklch(37.2% 0.044 257.287);
     --color-slate-800: oklch(27.9% 0.041 260.031);
@@ -42,6 +50,8 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --text-7xl: 4.5rem;
@@ -214,6 +224,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
@@ -300,8 +313,24 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-l-4 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 4px;
+  }
+  .border-amber-400 {
+    border-color: var(--color-amber-400);
+  }
+  .border-emerald-400 {
+    border-color: var(--color-emerald-400);
+  }
   .border-lime-300 {
     border-color: var(--color-lime-300);
+  }
+  .border-sky-400 {
+    border-color: var(--color-sky-400);
+  }
+  .border-slate-500 {
+    border-color: var(--color-slate-500);
   }
   .border-slate-700 {
     border-color: var(--color-slate-700);
@@ -312,8 +341,20 @@
   .bg-amber-900 {
     background-color: var(--color-amber-900);
   }
+  .bg-amber-950\/60 {
+    background-color: color-mix(in srgb, oklch(27.9% 0.077 45.635) 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-amber-950) 60%, transparent);
+    }
+  }
   .bg-emerald-900 {
     background-color: var(--color-emerald-900);
+  }
+  .bg-emerald-950\/60 {
+    background-color: color-mix(in srgb, oklch(26.2% 0.051 172.552) 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-emerald-950) 60%, transparent);
+    }
   }
   .bg-lime-300 {
     background-color: var(--color-lime-300);
@@ -326,6 +367,12 @@
   }
   .bg-rose-900 {
     background-color: var(--color-rose-900);
+  }
+  .bg-sky-950\/60 {
+    background-color: color-mix(in srgb, oklch(29.3% 0.066 243.157) 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-sky-950) 60%, transparent);
+    }
   }
   .bg-slate-700 {
     background-color: var(--color-slate-700);
@@ -347,6 +394,9 @@
   }
   .object-\[center_60\%\] {
     object-position: center 60%;
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
@@ -378,6 +428,9 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
   }
@@ -391,6 +444,10 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-5xl {
     font-size: var(--text-5xl);
@@ -452,6 +509,9 @@
   .text-rose-200 {
     color: var(--color-rose-200);
   }
+  .text-sky-200 {
+    color: var(--color-sky-200);
+  }
   .text-slate-100 {
     color: var(--color-slate-100);
   }
@@ -495,6 +555,9 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .placeholder\:text-slate-400::placeholder {
+    color: var(--color-slate-400);
+  }
   @media (hover: hover) {
     .hover\:bg-lime-200:hover {
       background-color: var(--color-lime-200);
@@ -523,6 +586,9 @@
       }
     }
   }
+  .focus\:border-lime-300:focus {
+    border-color: var(--color-lime-300);
+  }
   .focus\:ring-2:focus {
     --tw-ring-shadow: var(--tw-ring-inset, ) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -539,6 +605,9 @@
   }
   .focus\:ring-offset-slate-900:focus {
     --tw-ring-offset-color: var(--color-slate-900);
+  }
+  .focus\:ring-offset-slate-950:focus {
+    --tw-ring-offset-color: var(--color-slate-950);
   }
   .focus\:outline-hidden:focus {
     --tw-outline-style: none;
@@ -561,14 +630,24 @@
     .sm\:p-12 {
       padding: calc(var(--spacing) * 12);
     }
+    .sm\:px-8 {
+      padding-inline: calc(var(--spacing) * 8);
+    }
     .sm\:px-10 {
       padding-inline: calc(var(--spacing) * 10);
     }
     .sm\:py-10 {
       padding-block: calc(var(--spacing) * 10);
     }
+    .sm\:py-12 {
+      padding-block: calc(var(--spacing) * 12);
+    }
     .sm\:pb-16 {
       padding-bottom: calc(var(--spacing) * 16);
+    }
+    .sm\:text-5xl {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
     .sm\:text-7xl {
       font-size: var(--text-7xl);
@@ -692,4 +771,3 @@
     }
   }
 }
-
