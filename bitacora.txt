@@ -439,3 +439,12 @@ En un framework de componentes, como Bootstrap, parto del estilo base de
 un botón y selecciono una variante. Con el enfoque utility-first de Tailwind,
 compongo el estilo en el HTML con clases que controlan detalles concretos
 como el relleno, el color de fondo o el peso del texto.
+
+
+MiniReto 5. Maquetación de la landing
+
+Organicé el encabezado, las secciones y el pie dentro de un mismo contenedor centrado. Usé Flexbox para alinear el logo y la navegación en el encabezado y para distribuir los tres bloques del pie.
+
+Elegí Grid para los cuatro pasos porque lg:grid-cols-4 les da el mismo ancho en escritorio y gap-4 mantiene una separación uniforme. También usé Grid para poner las tres tarjetas de rutas en una fila.
+
+Reutilicé el botón y las clases de tarjeta del kit. Los enlaces del encabezado llevan a las secciones y el botón de la franja abre la página de reservas.
