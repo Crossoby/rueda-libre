@@ -466,3 +466,19 @@ Pruebas con emulación de dispositivo en Chromium
 | 1280 px | 3 | 4 | En fila | Visibles | Sí | No |
 
 También comprobé que las rutas pasan de una a dos columnas justo entre 639 y 640 px.
+
+MiniReto 7. Marca nocturna y modo oscuro
+
+Definí en @theme los cinco colores de Rueda Libre y el Amarillo Farol (#FFD166) de la campaña. Cargué Montserrat y Open Sans desde Google Fonts. Usé font-titulos para los encabezados y font-texto para el cuerpo en la landing y en el kit.
+
+Adapté los fondos, textos, tarjetas, bordes y campos con dark:. El modo claro usa Crema como fondo general y el oscuro usa Azul Noche. Las dos páginas responden a la preferencia de tema del sistema mediante prefers-color-scheme.
+
+| Texto y fondo | Contraste | Decisión |
+|---|---|---|
+| Verde Ruta sobre Azul Noche | 3,01:1 | En oscuro usé Amarillo Farol para los textos de acento |
+| Amarillo Farol sobre Azul Noche | 11,08:1 | Acentos y enlaces del menú al pasar el cursor en oscuro |
+| Blanco sobre Verde Ruta | 5,31:1 | Etiqueta Fácil y alerta de éxito en oscuro |
+| Blanco sobre Gris Asfalto | 6,00:1 | Botón secundario en oscuro |
+| Gris Asfalto sobre Crema | 5,57:1 | Texto secundario en claro |
+
+Emulé la preferencia de tema en Chromium y revisé ambas páginas a 360 y 1280 px. Medí los colores aplicados al texto y su fondo, incluidos los enlaces al pasar el cursor y el texto de los campos con foco. El menor contraste medido fue 5,31:1 en oscuro y 4,93:1 en claro. Ambos superaron el mínimo de 4,5:1 del reto.
