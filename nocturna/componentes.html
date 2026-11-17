@@ -9,40 +9,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/output.css">
 </head>
-<body class="bg-crema font-texto text-azul-noche scheme-light dark:bg-azul-noche dark:text-crema dark:scheme-dark">
-    <main class="mx-auto w-full max-w-3xl space-y-8 px-5 py-10 sm:px-8 sm:py-12">
+<body class="scheme-light font-texto bg-crema text-azul-noche dark:bg-azul-noche dark:text-crema dark:scheme-dark">
+    <main class="w-full max-w-3xl mx-auto space-y-8 px-5 py-10 sm:px-8 sm:py-12">
         <header>
-            <h1 class="text-4xl font-black leading-tight tracking-tight text-azul-noche dark:text-crema sm:text-5xl font-titulos">
+            <h1 class="text-4xl font-black leading-tight tracking-tight sm:text-5xl font-titulos text-azul-noche dark:text-crema">
                 Kit de componentes <span class="block text-verde-ruta dark:text-amarillo-farol">Rueda Nocturna v0.1</span>
             </h1>
         </header>
 
         <section class="space-y-4" aria-labelledby="titulo-botones">
-            <h2 class="text-2xl font-bold text-azul-noche dark:text-crema font-titulos" id="titulo-botones">Botones</h2>
-            <div class="flex flex-wrap gap-3 rounded-lg border border-gris-asfalto/35 dark:border-crema/25 bg-white dark:bg-crema/5 p-4">
+            <h2 class="text-2xl font-bold font-titulos text-azul-noche dark:text-crema" id="titulo-botones">Botones</h2>
+            <div class="flex flex-wrap rounded-lg border gap-3 p-4 border-gris-asfalto/35 bg-white dark:border-crema/25 dark:bg-crema/5">
                 <a href="../paginas/reservas.html"
-                    class="inline-block rounded-lg border border-transparent bg-verde-ruta px-5 py-3 font-bold text-white shadow-sm
-                    hover:bg-azul-noche focus:outline-hidden focus:ring-2 focus:ring-verde-ruta focus:ring-offset-2 focus:ring-offset-crema
-                    dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche dark:bg-amarillo-farol dark:text-azul-noche
-                    dark:hover:bg-naranja-pedal">Inscríbete</a>
+                    class="btn-inscripcion">Inscríbete</a>
                 <button type="button"
-                    class="cursor-pointer rounded-lg border border-transparent bg-azul-noche px-5 py-3 font-bold text-white shadow-sm
-                    hover:bg-gris-asfalto focus:outline-hidden focus:ring-2 focus:ring-verde-ruta focus:ring-offset-2 focus:ring-offset-crema
-                    dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche dark:border-crema/60 dark:bg-gris-asfalto
-                    dark:hover:bg-azul-noche">Secundario</button>
+                    class="cursor-pointer rounded-lg border
+                        px-5 py-3
+                        font-bold
+                        border-transparent bg-azul-noche text-white shadow-sm
+                        hover:bg-gris-asfalto
+                        focus:outline-hidden focus:ring-2 focus:ring-verde-ruta focus:ring-offset-2 focus:ring-offset-crema
+                        dark:border-crema/60 dark:bg-gris-asfalto
+                        dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche dark:hover:bg-azul-noche">Secundario</button>
                 <button type="button"
-                    class="cursor-pointer rounded-lg border border-verde-ruta bg-transparent px-5 py-3 font-bold text-verde-ruta shadow-sm
-                    hover:bg-verde-ruta hover:text-white focus:outline-hidden focus:ring-2 focus:ring-verde-ruta focus:ring-offset-2
-                    focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche dark:border-amarillo-farol
-                    dark:text-amarillo-farol dark:hover:bg-amarillo-farol dark:hover:text-azul-noche">Contorno</button>
+                    class="cursor-pointer rounded-lg border
+                        px-5 py-3
+                        font-bold
+                        border-verde-ruta bg-transparent text-verde-ruta shadow-sm
+                        hover:bg-verde-ruta hover:text-white
+                        focus:outline-hidden focus:ring-2 focus:ring-verde-ruta focus:ring-offset-2 focus:ring-offset-crema
+                        dark:border-amarillo-farol dark:text-amarillo-farol
+                        dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche dark:hover:bg-amarillo-farol dark:hover:text-azul-noche">Contorno</button>
             </div>
         </section>
 
         <section class="space-y-4" aria-labelledby="titulo-tarjeta">
-            <h2 class="text-2xl font-bold text-azul-noche dark:text-crema font-titulos" id="titulo-tarjeta">Tarjeta de ruta</h2>
-            <article class="overflow-hidden rounded-lg border border-gris-asfalto/35 dark:border-crema/25 bg-white dark:bg-crema/5 shadow-lg
-                shadow-azul-noche/10 dark:shadow-black/25 transition-shadow hover:shadow-xl hover:shadow-azul-noche/20
-                dark:hover:shadow-amarillo-farol/15">
+            <h2 class="text-2xl font-bold font-titulos text-azul-noche dark:text-crema" id="titulo-tarjeta">Tarjeta de ruta</h2>
+            <article class="overflow-hidden rounded-lg border transition-shadow
+                border-gris-asfalto/35 bg-white shadow-lg shadow-azul-noche/10
+                hover:shadow-xl hover:shadow-azul-noche/20
+                dark:border-crema/25 dark:bg-crema/5 dark:shadow-black/25 dark:hover:shadow-amarillo-farol/15">
                 <figure>
                     <img src="img/luces-del-centro.jpg" class="h-48 w-full object-cover object-[center_60%] sm:h-72"
                         alt="Edificio Carré iluminado de noche en el centro de Medellín" loading="lazy">
@@ -54,7 +60,7 @@
                 <div class="space-y-5 p-6">
                     <header class="space-y-2">
                         <p class="w-fit rounded-full px-3 py-1 text-sm font-bold bg-verde-ruta text-white">Fácil</p>
-                        <h3 class="text-2xl font-bold text-azul-noche dark:text-crema font-titulos">Luces del Centro</h3>
+                        <h3 class="text-2xl font-bold font-titulos text-azul-noche dark:text-crema">Luces del Centro</h3>
                     </header>
 
                     <dl class="flex flex-wrap gap-x-8 gap-y-3">
@@ -75,43 +81,46 @@
                     <div class="flex flex-wrap items-center gap-4">
                         <p class="text-2xl font-bold text-azul-noche dark:text-crema">$55.000</p>
                         <a href="../paginas/reservas.html"
-                            class="inline-block rounded-lg border border-transparent bg-verde-ruta px-5 py-3 font-bold text-white shadow-sm
-                            hover:bg-azul-noche focus:outline-hidden focus:ring-2 focus:ring-verde-ruta focus:ring-offset-2
-                            focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche dark:bg-amarillo-farol
-                            dark:text-azul-noche dark:hover:bg-naranja-pedal">Inscríbete</a>
+                            class="btn-inscripcion">Inscríbete</a>
                     </div>
                 </div>
             </article>
         </section>
 
         <section class="space-y-4" aria-labelledby="titulo-alertas">
-            <h2 class="text-2xl font-bold text-azul-noche dark:text-crema font-titulos" id="titulo-alertas">Alertas</h2>
+            <h2 class="text-2xl font-bold font-titulos text-azul-noche dark:text-crema" id="titulo-alertas">Alertas</h2>
 
-            <div class="space-y-2 rounded-lg border-l-4 border-azul-noche bg-azul-noche/5 p-4 dark:border-crema/70 dark:bg-crema/10">
+            <div class="rounded-lg space-y-2 p-4 border-l-4 border-azul-noche bg-azul-noche/5 dark:border-crema/70 dark:bg-crema/10">
                 <h3 class="font-bold font-titulos">Información</h3>
                 <p class="text-sm">Todas las rutas salen de la sede de Rueda Libre.</p>
             </div>
 
-            <div class="space-y-2 rounded-lg border-l-4 border-verde-ruta bg-verde-ruta/10 p-4 dark:border-crema/70 dark:bg-verde-ruta dark:text-white" role="status">
+            <div class="rounded-lg
+                space-y-2 p-4
+                border-l-4 border-verde-ruta bg-verde-ruta/10
+                dark:border-crema/70 dark:bg-verde-ruta dark:text-white" role="status">
                 <h3 class="font-bold font-titulos">Éxito</h3>
                 <p class="text-sm">Tu solicitud de inscripción se registró correctamente.</p>
             </div>
 
-            <div class="space-y-2 rounded-lg border-l-4 border-naranja-pedal bg-naranja-pedal/20 p-4 dark:bg-naranja-pedal/15">
+            <div class="rounded-lg space-y-2 p-4 border-l-4 border-naranja-pedal bg-naranja-pedal/20 dark:bg-naranja-pedal/15">
                 <h3 class="font-bold font-titulos">Advertencia</h3>
                 <p class="text-sm">Revisa tus datos de contacto antes de enviar la solicitud.</p>
             </div>
         </section>
 
         <section class="space-y-4" aria-labelledby="titulo-campos">
-            <h2 class="text-2xl font-bold text-azul-noche dark:text-crema font-titulos" id="titulo-campos">Campos de formulario</h2>
+            <h2 class="text-2xl font-bold font-titulos text-azul-noche dark:text-crema" id="titulo-campos">Campos de formulario</h2>
 
             <div class="space-y-2">
                 <label class="block font-semibold text-azul-noche dark:text-crema" for="correo">Correo electrónico</label>
-                <input class="w-full rounded-lg border border-gris-asfalto bg-white px-5 py-3 text-azul-noche placeholder:text-gris-asfalto
+                <input class="w-full rounded-lg border
+                    px-5 py-3
+                    border-gris-asfalto bg-white text-azul-noche
                     focus:border-verde-ruta focus:outline-hidden focus:ring-2 focus:ring-verde-ruta focus:ring-offset-2 focus:ring-offset-crema
-                    dark:border-crema/60 dark:bg-azul-noche dark:text-crema dark:placeholder:text-crema/80 dark:focus:border-amarillo-farol
-                    dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche"
+                    placeholder:text-gris-asfalto
+                    dark:border-crema/60 dark:bg-azul-noche dark:text-crema
+                    dark:placeholder:text-crema/80 dark:focus:border-amarillo-farol dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche"
                     type="email" id="correo" name="correo" autocomplete="email"
                     placeholder="nombre@ejemplo.com" aria-describedby="ayuda-correo">
                 <p class="text-sm text-gris-asfalto dark:text-crema/85" id="ayuda-correo">Escribe el correo donde quieres recibir la confirmación.</p>
@@ -119,10 +128,13 @@
 
             <div class="space-y-2">
                 <label class="block font-semibold text-azul-noche dark:text-crema" for="celular">Celular</label>
-                <input class="w-full rounded-lg border border-gris-asfalto bg-white px-5 py-3 text-azul-noche placeholder:text-gris-asfalto
+                <input class="w-full rounded-lg border
+                    px-5 py-3
+                    border-gris-asfalto bg-white text-azul-noche
                     focus:border-verde-ruta focus:outline-hidden focus:ring-2 focus:ring-verde-ruta focus:ring-offset-2 focus:ring-offset-crema
-                    dark:border-crema/60 dark:bg-azul-noche dark:text-crema dark:placeholder:text-crema/80 dark:focus:border-amarillo-farol
-                    dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche"
+                    placeholder:text-gris-asfalto
+                    dark:border-crema/60 dark:bg-azul-noche dark:text-crema
+                    dark:placeholder:text-crema/80 dark:focus:border-amarillo-farol dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche"
                     type="tel" id="celular" name="celular" autocomplete="tel"
                     placeholder="300 000 0000" aria-describedby="ayuda-celular">
                 <p class="text-sm text-gris-asfalto dark:text-crema/85" id="ayuda-celular">Usa un número en el que podamos contactarte sobre la ruta.</p>

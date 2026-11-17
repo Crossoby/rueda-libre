@@ -482,3 +482,42 @@ Adapté los fondos, textos, tarjetas, bordes y campos con dark:. El modo claro u
 | Gris Asfalto sobre Crema | 5,57:1 | Texto secundario en claro |
 
 Emulé la preferencia de tema en Chromium y revisé ambas páginas a 360 y 1280 px. Medí los colores aplicados al texto y su fondo, incluidos los enlaces al pasar el cursor y el texto de los campos con foco. El menor contraste medido fue 5,31:1 en oscuro y 4,93:1 en claro. Ambos superaron el mínimo de 4,5:1 del reto.
+
+
+MiniReto 8. Código legible y veredicto
+
+Conté las listas completas de clases en el HTML del MiniReto 7. Tomé dos listas como iguales cuando tenían las mismas clases.
+
+| Lista | Archivo | Veces antes del cambio |
+|---|---|---|
+| Valores de datos de ruta y textos del pie con font-semibold text-azul-noche dark:text-crema | Landing | 12 |
+| Nombres de datos con text-xs font-medium text-gris-asfalto dark:text-crema/85 | Landing | 9 |
+| Botón Inscríbete con 21 utilidades | Landing | 6 |
+| Enlaces de créditos con underline | Landing | 6 |
+| Encabezados de sección y tarjeta con space-y-2 | Landing | 4 |
+| Paneles de los pasos, con borde, fondo y marcador | Landing | 4 |
+| Tarjetas de ruta con sombra, borde y fondo | Landing | 3 |
+| Botón Inscríbete con las mismas 21 utilidades | Kit | 2 |
+| Campos de correo y celular con clases iguales | Kit | 2 |
+
+Creé .btn-inscripcion con @apply dentro de @layer components. Cada uno de los ocho enlaces usa una clase. Reutilicé el marcado del kit para las tarjetas y ordené las clases por layout, espaciado, tipografía, color y estados.
+
+Compilé con la CLI de Tailwind 4.3.5 y la opción --minify. El output.css del MiniReto 7 pesaba 30.967 bytes. Medí los recursos descomprimidos con Network del protocolo de DevTools en Chromium y verifiqué los archivos de Bootstrap 5.3.8 con las huellas SHA-384 declaradas en el HTML de v2.0.
+
+| Recurso | Bytes |
+|---|---|
+| Tailwind output.css minificado de la landing y el kit | 26.248 |
+| Bootstrap bootstrap.min.css | 232.111 |
+| Bootstrap bootstrap.bundle.min.js | 80.496 |
+| Total del CSS y JavaScript de Bootstrap v2.0 | 312.607 |
+
+| Criterio | Bootstrap en Rueda Libre v2.0 | Tailwind en Rueda Nocturna |
+|---|---|---|
+| Curva de aprendizaje | La navbar colapsable y el modal se construyeron a partir del marcado de sus componentes. | La cuadrícula y los temas requirieron combinar utilidades como sm:, lg: y dark:. La clase del botón redujo de 21 a 1 las clases por enlace. |
+| Personalización | La marca se aplicó con variables de Bootstrap y reglas en css/styles.css. | Los seis colores y dos familias se definieron en @theme. El botón se comparte con @apply. |
+| Tamaño final | El CSS y JavaScript de Bootstrap suman 312.607 bytes. | El CSS minificado de la landing y el kit suma 26.248 bytes. JavaScript del framework, 0 bytes. |
+| Casos de uso | El sitio v2.0 aprovecha la navbar colapsable y el modal de políticas de Reservas. | La campaña usa un diseño de marca, cuadrículas responsive y un kit compartido. |
+
+Recomiendo Tailwind para la próxima versión de Rueda Libre. La landing y el kit comparten colores y fuentes de marca con 26.248 bytes de CSS. La migración del sitio completo incluiría implementar y probar el comportamiento del menú y el modal que hoy aporta Bootstrap.
+
+Revisé la landing y el kit en Chromium a 360, 768, 1024 y 1280 px, en ambos temas. Comparé la interfaz, la posición y el recorte de las imágenes y los estilos del botón en reposo, hover y foco.
