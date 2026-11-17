@@ -448,3 +448,21 @@ Organicé el encabezado, las secciones y el pie dentro de un mismo contenedor ce
 Elegí Grid para los cuatro pasos porque lg:grid-cols-4 les da el mismo ancho en escritorio y gap-4 mantiene una separación uniforme. También usé Grid para poner las tres tarjetas de rutas en una fila.
 
 Reutilicé el botón y las clases de tarjeta del kit. Los enlaces del encabezado llevan a las secciones y el botón de la franja abre la página de reservas.
+
+
+MiniReto 6. La noche cabe en tu celular
+
+Revisé la landing del MiniReto 5 a 360 px. El logo, los enlaces y el botón ocupaban tres filas porque el menú seguía visible. El título de la portada ocupaba dos líneas a 48 px y había 32 px de separación entre bloques. Las rutas y los pasos ya cabían en una columna sin scroll horizontal. A 640 px las rutas todavía estaban en una columna.
+
+Dejé una columna como base con grid-cols-1. Desde sm (640 px), las rutas y los pasos usan dos columnas. Desde lg (1024 px), las rutas usan tres y los pasos cuatro. El encabezado, la franja y el pie quedan apilados en móvil y pasan a fila desde md (768 px). Usé hidden md:flex para ocultar en móvil los enlaces del menú y mantuve el botón Inscríbete visible. Ajusté el título de la portada de 36 px en móvil a 72 px en escritorio, y el relleno de 20 px a 48 px.
+
+Pruebas con emulación de dispositivo en Chromium
+
+| Ancho | Columnas de rutas | Columnas de pasos | Encabezado | Enlaces del menú | Inscríbete visible | Scroll horizontal |
+|---|---|---|---|---|---|---|
+| 360 px | 1 | 1 | Apilado | Ocultos | Sí | No |
+| 768 px | 2 | 2 | En fila | Visibles | Sí | No |
+| 1024 px | 3 | 4 | En fila | Visibles | Sí | No |
+| 1280 px | 3 | 4 | En fila | Visibles | Sí | No |
+
+También comprobé que las rutas pasan de una a dos columnas justo entre 639 y 640 px.
