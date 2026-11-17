@@ -610,3 +610,20 @@ La posición vertical se midió desde el inicio del documento. Las tres tarjetas
 Comprobé el contraste de los textos de planes, precios, beneficios, etiqueta y botones. El menor valor en reposo fue 4.61:1 en claro y 8.83:1 en oscuro. Los estados hover también superaron 4,5:1 y todos los botones conservaron el foco visible. Recorrí los tres botones con Tab y activé el último con Enter, que llevó a la sección Inscripción.
 
 El CSS minificado está regenerado. Quedan pendientes aplicar la entrega en el repositorio, hacer commit y push y revisar la sección publicada.
+
+
+MiniReto 12. Lanzamiento Rueda Nocturna. Entrega y demo
+
+Consolidé la descripción, los enlaces, las páginas, las tecnologías, la recomendación del MiniReto 8, los aprendizajes, el autor y la bitácora resumida en README.md. Incluí capturas reales de escritorio, celular y modo oscuro y un guion de demo de tres minutos.
+
+El validador Nu de W3C detectó un autocomplete no admitido en el celular de la landing y la falta del rol del modal de Reservas. Cambié el autocompletado a tel y añadí role=dialog. La validación final devolvió cero errores y cero advertencias en las dos páginas solicitadas.
+
+En la revisión de accesibilidad dejé un solo h1 principal en las páginas del sitio y mantuve la apariencia de la marca con su clase. Añadí nombres a la navegación y textos alternativos más precisos para el logo y las rutas.
+
+La foto Trail en JXL no pudo decodificarse en el navegador de prueba. Generé una copia WebP de la misma imagen y actualicé su referencia. El formulario de Reservas enviaba a una página sin receptor. Ahora valida los datos, lleva el foco al primer control inválido y muestra una confirmación local de demostración, como la landing. Ninguno de los dos formularios envía ni guarda datos reales.
+
+Revisé Inicio, Tarifas, Reservas, la landing y el kit a 360, 768 y 1280 px. También probé claro y oscuro en la campaña, navegación por teclado, modal, formularios vacíos, inválidos y completos, carga de imágenes, recursos y anclas internas. Se completaron 21 combinaciones de página, ancho y tema sin desbordamiento ni respuestas 404 locales. El contraste mínimo de texto medido en reposo fue 4.53:1.
+
+El CSS de Tailwind se recompiló con --minify y ocupa 28345 bytes.
+
+El inicio y las páginas públicas respondieron antes de la entrega, pero esa comprobación corresponde a la versión que ya estaba desplegada. Quedan pendientes el commit y push de lanzamiento, verificar esta última versión en GitHub Pages y ensayar con un compañero. No se ha registrado un tiempo de demo ni retroalimentación de un compañero porque ese ensayo todavía no se ha realizado.
