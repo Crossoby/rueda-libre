@@ -521,3 +521,30 @@ Compilé con la CLI de Tailwind 4.3.5 y la opción --minify. El output.css del M
 Recomiendo Tailwind para la próxima versión de Rueda Libre. La landing y el kit comparten colores y fuentes de marca con 26.248 bytes de CSS. La migración del sitio completo incluiría implementar y probar el comportamiento del menú y el modal que hoy aporta Bootstrap.
 
 Revisé la landing y el kit en Chromium a 360, 768, 1024 y 1280 px, en ambos temas. Comparé la interfaz, la posición y el recorte de las imágenes y los estilos del botón en reposo, hover y foco.
+
+
+MiniReto 9. Contrarreloj 1. Inscripción a Rueda Nocturna
+
+Tiempo real de implementación y pruebas asistidas de esta entrega, 7 minutos y 22 segundos.
+
+Agregué el formulario en la sección Inscripción de la landing. Agrupé los campos con fieldset y legend y asocié cada control a una etiqueta visible con label y for. Los botones Inscríbete del encabezado, la portada y las tres rutas llevan al formulario.
+
+Usé los campos y el botón principal del kit, con una columna en celular y dos columnas para los campos cortos desde md. Conservé el foco visible y los colores de la marca en los modos claro y oscuro. Regeneré el CSS minificado con la CLI de Tailwind.
+
+Todos los datos son obligatorios mediante required. El nombre exige al menos 3 caracteres con minlength, el correo usa type=email y el celular usa type=tel con pattern="3[0-9]{9}" y title. Los acompañantes usan type=number, min=0, max=3 y step=1. Usé select para la ruta, el día y el nivel, radios para bicicleta propia y una casilla para aceptar las condiciones.
+
+Pruebas realizadas en Chromium
+
+| Caso | Resultado |
+|---|---|
+| Formulario vacío | El navegador bloquea el envío y lleva el foco al nombre |
+| Nombre de 2 caracteres y correo sin arroba | Bloqueados por la validación nativa |
+| Celular de 9 o 11 dígitos o que empieza por 2 | Bloqueado por pattern |
+| Acompañantes -1, 4 o 1.5 | Bloqueados por min, max o step |
+| Sin elegir bicicleta propia o sin aceptar condiciones | Bloqueado por required |
+| Todos los datos válidos | Muestra la confirmación local |
+| Recorrido solo con teclado | Completado con Tab, flechas, espacio y Enter |
+| 360 y 767 px, claro y oscuro | Una columna, sin scroll horizontal |
+| 768 y 1280 px, claro y oscuro | Dos columnas en campos cortos, sin scroll horizontal |
+
+El JavaScript únicamente muestra una confirmación de demostración después de que el navegador valida los datos. No envía ni guarda inscripciones. Para recibir inscripciones reales queda pendiente configurar un destino de envío. El commit y el push se realizan al aplicar esta entrega al repositorio.
