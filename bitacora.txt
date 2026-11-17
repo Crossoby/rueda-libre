@@ -548,3 +548,31 @@ Pruebas realizadas en Chromium
 | 768 y 1280 px, claro y oscuro | Dos columnas en campos cortos, sin scroll horizontal |
 
 El JavaScript únicamente muestra una confirmación de demostración después de que el navegador valida los datos. No envía ni guarda inscripciones. Para recibir inscripciones reales queda pendiente configurar un destino de envío. El commit y el push se realizan al aplicar esta entrega al repositorio.
+
+
+MiniReto 10. Contrarreloj 2. Un solo ecosistema
+
+Tiempo real de implementación y pruebas asistidas de esta entrega, 6 minutos y 30 segundos.
+
+Agregué Rueda Nocturna a la navbar de Inicio, Tarifas y Reservas. Desde Inicio usé nocturna/index.html y desde las páginas internas ../nocturna/index.html. Conservé el enlace activo de cada página.
+
+La versión del inicio disponible en el repositorio no tenía un carrusel. Convertí la portada existente en su primera diapositiva y agregué una segunda para Rueda Nocturna, con enlace a la landing y controles Anterior y Siguiente de Bootstrap. Reutilicé la imagen de Luces del Centro con sus créditos.
+
+En la landing cambié el enlace del logo a ../index.html y añadí Reserva tu bici con destino ../paginas/reservas.html. El nuevo enlace usa el estilo secundario del kit. El formulario y su validación del MiniReto 9 se conservan.
+
+Comprobé que los seis colores de marca coinciden entre las variables del sitio y @theme. Añadí Amarillo Farol (#FFD166) a css/styles.css y lo conecté con --bs-warning y --bs-warning-rgb. Ambos sitios mantienen Montserrat para títulos y Open Sans para texto. El pie de la landing incluye Rueda Libre, Medellín y hola@ruedalibre.example, los mismos datos del pie del sitio principal.
+
+Pruebas realizadas en Chromium
+
+| Comprobación | Resultado |
+|---|---|
+| Navbar de Inicio, Tarifas y Reservas | Cada enlace Rueda Nocturna abre la landing |
+| Menú de celular | Se despliega y permite abrir la campaña |
+| Carrusel | Anterior y Siguiente cambian de diapositiva y el botón abre la campaña |
+| Logo de la landing | Regresa al inicio del sitio |
+| Reserva tu bici | Abre la página de reservas |
+| 360, 768, 992 y 1280 px | Navegación funcional y sin scroll horizontal |
+| Landing clara y oscura | Conserva el tema y el foco visible del nuevo botón |
+| Páginas, recursos locales y anclas internas | Sin destinos faltantes ni respuestas 404 durante las pruebas |
+
+Las pruebas locales se hicieron desde una subcarpeta para comprobar las rutas relativas como en GitHub Pages. El inicio y la landing publicados respondieron 200 antes de esta entrega. La publicación del MiniReto 10 y su revisión final en línea quedan pendientes de aplicar los archivos, hacer commit y push y esperar la actualización de GitHub Pages. Después se deben repetir los recorridos desde https://crossoby.github.io/rueda-libre/.

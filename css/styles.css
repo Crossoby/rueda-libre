@@ -9,6 +9,7 @@
     --verde-ruta-activo: #134A31;
     --gris-asfalto: #5B6470;
     --naranja-pedal: #F2994A;
+    --amarillo-farol: #FFD166;
     --naranja-pedal-hover: #E58A3D;
     --naranja-pedal-activo: #D7792C;
     --blanco: #FFFFFF;
@@ -18,6 +19,8 @@
     --espacio-l: 2rem;
     --espacio-xl: 3rem;
 
+    --bs-warning: var(--amarillo-farol);
+    --bs-warning-rgb: 255, 209, 102;
     --bs-primary: var(--verde-ruta);
     --bs-primary-rgb: 30, 122, 79;
     --bs-success-rgb: var(--bs-primary-rgb);

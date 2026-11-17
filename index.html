@@ -43,34 +43,73 @@
                             <a class="nav-link p-3 rounded" href="paginas/reservas.html"><i
                                     class="bi bi-calendar-check me-2" aria-hidden="true"></i>Reservas</a>
                         </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link p-3 rounded" href="nocturna/index.html"><i class="bi bi-moon-stars me-2" aria-hidden="true"></i>Rueda Nocturna</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <main id="contenido" class="container">
-        <section class="portada portada-marca container-fluid px-3 pt-4 mb-4 mt-4" aria-labelledby="titulo-portada">
-            <div class="row align-items-center">
-                <div class="texto-portada col-12 col-sm-6 col-md-5">
-                    <p class="antetitulo">Medellín y sus alrededores</p>
-                    <h1 id="titulo-portada">Tu próxima ruta empieza aquí.</h1>
-                    <p>Bienvenido a Rueda Libre, un espacio donde podrás encontrar tu compañera de rutas para atravesar
-                        Medellín y sus ciudades aledañas. Sumérgete y da el primer pedalazo con nosotros.</p>
-                    <div class="acciones d-flex flex-wrap gap-3">
-                        <a href="paginas/reservas.html" class="btn btn-primary btn-lg m-2">Reservar ahora</a>
-                        <a href="paginas/tarifas.html" class="btn btn-naranja-pedal btn-lg m-2">Consultar tarifas</a>
+        <div id="carrusel-portada" class="carousel slide" role="region" aria-label="Novedades de Rueda Libre">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <section class="portada portada-marca container-fluid px-3 pt-4 mb-4 mt-4" aria-labelledby="titulo-portada">
+                    <div class="row align-items-center">
+                        <div class="texto-portada col-12 col-sm-6 col-md-5">
+                            <p class="antetitulo">Medellín y sus alrededores</p>
+                            <h1 id="titulo-portada">Tu próxima ruta empieza aquí.</h1>
+                            <p>Bienvenido a Rueda Libre, un espacio donde podrás encontrar tu compañera de rutas para atravesar
+                                Medellín y sus ciudades aledañas. Sumérgete y da el primer pedalazo con nosotros.</p>
+                            <div class="acciones d-flex flex-wrap gap-3">
+                                <a href="paginas/reservas.html" class="btn btn-primary btn-lg m-2">Reservar ahora</a>
+                                <a href="paginas/tarifas.html" class="btn btn-naranja-pedal btn-lg m-2">Consultar tarifas</a>
+                            </div>
+                            <div id="secundarios">
+                                <a href="#encuentranos">Encuéntranos</a> · <a
+                                    href="mailto:hola@ruedalibre.example">Escríbenos</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-7">
+                            <img class="imagen-portada img-fluid d-block my-5 mx-auto" src="img/ruta.jpg"
+                                alt="Ciclista recorriendo una vía urbana junto a edificios" width="560">
+                        </div>
                     </div>
-                    <div id="secundarios">
-                        <a href="#encuentranos">Encuéntranos</a> · <a
-                            href="mailto:hola@ruedalibre.example">Escríbenos</a>
-                    </div>
+                </section>
                 </div>
-                <div class="col-12 col-sm-6 col-md-7">
-                    <img class="imagen-portada img-fluid d-block my-5 mx-auto" src="img/ruta.jpg"
-                        alt="Ciclista recorriendo una vía urbana junto a edificios" width="560">
+                <div class="carousel-item">
+                    <section class="portada portada-marca container-fluid p-4 my-4" aria-labelledby="titulo-campana">
+                        <div class="row align-items-center g-4">
+                            <div class="col-12 col-md-6">
+                                <p class="badge bg-warning text-dark">Nuevo · Jueves a sábado</p>
+                                <h2 id="titulo-campana">Rueda Nocturna</h2>
+                                <p>Descubre Medellín en bici cuando se encienden las luces.</p>
+                                <p>3 rutas · Desde $55.000 · Salida a las 7:30 p. m.</p>
+                                <a href="nocturna/index.html" class="btn btn-primary btn-lg">Conoce Rueda Nocturna</a>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <figure class="mb-0">
+                                    <img src="nocturna/img/luces-del-centro.jpg" class="img-fluid w-100" alt="Edificio Carré iluminado de noche en el centro de Medellín">
+                                    <figcaption class="figure-caption mt-2">
+                                        <a href="https://commons.wikimedia.org/wiki/File:Edificio_Carre-Noche-Medellin.JPG">SajoR · Wikimedia Commons</a>
+                                        · <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
-        </section>
+            <div class="d-flex justify-content-between gap-3 mb-4">
+                <button class="btn btn-primary" type="button" data-bs-target="#carrusel-portada" data-bs-slide="prev">
+                    <i class="bi bi-chevron-left me-2" aria-hidden="true"></i>Anterior
+                </button>
+                <button class="btn btn-primary" type="button" data-bs-target="#carrusel-portada" data-bs-slide="next">
+                    Siguiente<i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
         <section class="">
             <h2 class="titulo-seccion">¿Quiénes somos?</h2>
             <p>Somos una empresa comprometida con el cuidado del medio ambiente y la sostenibilidad. Por ello, ofrecemos
