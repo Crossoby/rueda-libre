@@ -576,3 +576,37 @@ Pruebas realizadas en Chromium
 | Páginas, recursos locales y anclas internas | Sin destinos faltantes ni respuestas 404 durante las pruebas |
 
 Las pruebas locales se hicieron desde una subcarpeta para comprobar las rutas relativas como en GitHub Pages. El inicio y la landing publicados respondieron 200 antes de esta entrega. La publicación del MiniReto 10 y su revisión final en línea quedan pendientes de aplicar los archivos, hacer commit y push y esperar la actualización de GitHub Pages. Después se deben repetir los recorridos desde https://crossoby.github.io/rueda-libre/.
+
+
+MiniReto 11. Contrarreloj 3. Requerimiento de último momento
+
+Tiempo real de implementación y pruebas asistidas de esta entrega, 3 minutos y 24 segundos.
+
+Agregué la sección Planes Rueda Nocturna después de las rutas. Incluí Individual por $55.000 por persona, Pareja por $99.000 las dos personas y Grupo de 4 a 8 por $45.000 por persona, con los beneficios indicados en el reto.
+
+Usé grid grid-cols-1 lg:grid-cols-3 para pasar de una columna a tres desde 1024 px. Las tarjetas usan flex flex-col justify-between, gap-6 y p-6. Así el contenido queda arriba y el botón del kit al final. Las listas de beneficios usan flex flex-col gap-3.
+
+Destacé Pareja con la etiqueta Más elegido, un fondo diferente y border-t-4 para engrosar el borde superior. Los laterales y la base conservan el grosor común, de manera que las tarjetas tienen el mismo ancho y los botones quedan alineados. El relleno es de 24 px en los cuatro lados de todas las tarjetas. El modo oscuro cambia los acentos a Amarillo Farol.
+
+Medí los estilos calculados y las cajas en Chromium con getComputedStyle y getBoundingClientRect, los valores que se consultan en Computed y en el box model de DevTools.
+
+Medidas a 1280 px, iguales en modo claro y oscuro
+
+| Plan | Ancho exterior | Alto exterior | Relleno en cada lado | Posición vertical superior del botón |
+|---|---|---|---|---|
+| Individual | 384 px | 423 px | 24 px | 1788 px |
+| Pareja | 384 px | 423 px | 24 px | 1788 px |
+| Grupo | 384 px | 423 px | 24 px | 1788 px |
+
+La posición vertical se midió desde el inicio del documento. Las tres tarjetas usan border-box y las tres listas tienen una separación de 12 px entre beneficios.
+
+| Ancho de pantalla | Columnas | Resultado en claro y oscuro |
+|---|---|---|
+| 360 px | 1 | Sin scroll horizontal |
+| 1023 px | 1 | Sin scroll horizontal |
+| 1024 px | 3 | Alturas iguales y botones alineados |
+| 1280 px | 3 | Alturas iguales y botones alineados |
+
+Comprobé el contraste de los textos de planes, precios, beneficios, etiqueta y botones. El menor valor en reposo fue 4.61:1 en claro y 8.83:1 en oscuro. Los estados hover también superaron 4,5:1 y todos los botones conservaron el foco visible. Recorrí los tres botones con Tab y activé el último con Enter, que llevó a la sección Inscripción.
+
+El CSS minificado está regenerado. Quedan pendientes aplicar la entrega en el repositorio, hacer commit y push y revisar la sección publicada.
